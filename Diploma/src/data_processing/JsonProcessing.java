@@ -21,7 +21,7 @@ public class JsonProcessing {
 			JsonNode jsonNode = parser.readValueAsTree();
 			ObjectNodeProcessing objectNodeProcessing = new ObjectNodeProcessing();
 			objectNodeProcessing.setObjectNode(jsonNode);
-			objectNodeProcessing.processObject("top_node");
+			objectNodeProcessing.processObject("root");
 		}
 	}
 	

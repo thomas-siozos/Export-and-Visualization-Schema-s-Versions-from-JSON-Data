@@ -5,7 +5,6 @@ import java.util.HashMap;
 public class ObjectNode {
 	
 	private String parent;
-	private boolean objectInList;
 	private HashMap<String, String> primitives = new HashMap<String, String>();
 	private HashMap<String, String> lists = new HashMap<String, String>();
 	private HashMap<String, String> kids = new HashMap<String, String>();
@@ -16,14 +15,6 @@ public class ObjectNode {
 	
 	public String getParent() {
 		return parent;
-	}
-	
-	public void setObjectInList(boolean objectInList) {
-		this.objectInList = objectInList;
-	}
-	
-	public boolean getObjectInList() {
-		return objectInList;
 	}
 	
 	public void addPrimitive(String key, String value) {
