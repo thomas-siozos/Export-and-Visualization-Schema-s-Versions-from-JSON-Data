@@ -1,6 +1,5 @@
 package data_processing;
 
-import java.util.Iterator;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class JsonNodeType {
@@ -36,18 +35,4 @@ public class JsonNodeType {
 		}
 		return null;
 	}
-	
-	public String getArrayAsString() {
-		StringBuilder arrayTabDelimited = new StringBuilder();
-		Iterator<JsonNode> arrayIterator = jsonNode.elements();
-		JsonNode next;
-		while (arrayIterator.hasNext() ) {
-			next = arrayIterator.next();
-			arrayTabDelimited.append(next.getClass().getSimpleName() + "\t");
-			//System.out.println(next.getClass().getSimpleName());
-		}
-		//System.out.println(arrayTabDelimited);
-		return arrayTabDelimited.toString();
-	}
-
 }
