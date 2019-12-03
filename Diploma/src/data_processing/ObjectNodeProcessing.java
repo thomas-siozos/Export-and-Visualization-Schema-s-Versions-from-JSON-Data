@@ -38,32 +38,6 @@ public class ObjectNodeProcessing {
 		printSchema();
 	}
 	
-	private HashMap<String, String> fillNestedMap(String key, String value) {
-		HashMap<String, String> nestedMap = new HashMap<String, String>();
-		nestedMap.put(key, value);
-		return nestedMap;
-	}
-	
-	private void printSchema() {
-		for (Map.Entry<Integer, HashMap<String, String>> entry :
-											schema.entrySet()) {
-			for (Map.Entry<String, String> entryInNestedMap :
-								entry.getValue().entrySet()) {
-				if (entryInNestedMap.getKey().equals("START OBJECT")) {
-					System.out.println("{");
-				} else if (entryInNestedMap.getKey().equals("END OBJECT")) {
-					System.out.println("}");
-				} else if (entryInNestedMap.getKey().equals("START LIST")) {
-					System.out.println("[");
-				} else if (entryInNestedMap.getKey().equals("END LIST")) {
-					System.out.println("]");
-				} else {
-					System.out.println(entryInNestedMap);
-				}
-			}
-		}
-		System.out.println("\n--------\n");
-	}
 
 	private void createListOnSchema(Map.Entry<String, JsonNode> nextField) {
 		schema.put(id, fillNestedMap(nextField.getKey(),
@@ -77,15 +51,10 @@ public class ObjectNodeProcessing {
 		id++;
 	}
 	
-	private void createObjectOnSchema(Map.Entry<String, JsonNode> nextField) {
-		schema.put(id, fillNestedMap(nextField.getKey(),
-				jsonNodeType.getTypeAsString()));
-		id++;
-		schema.put(id, fillNestedMap("START OBJECT", "Object Node"));
-		id++;
-		processKidObject(nextField.getValue());
-		schema.put(id, fillNestedMap("END OBJECT", "Object Node"));
-		id++;
+	private HashMap<String, String> fillNestedMap(String key, String value) {
+		HashMap<String, String> nestedMap = new HashMap<String, String>();
+		nestedMap.put(key, value);
+		return nestedMap;
 	}
 	
 	private void processList(String key, JsonNode list) {
@@ -99,7 +68,8 @@ public class ObjectNodeProcessing {
 				schema.put(id, fillNestedMap("END OBJECT", "Object Node"));
 				id++;
 			} else {
-				schema.put(id, fillNestedMap(Integer.toString(id), jsonNodeType.getTypeAsString()));
+				schema.put(id, fillNestedMap(Integer.toString(id),
+						jsonNodeType.getTypeAsString()));
 				id++;
 			}
 		}
@@ -121,5 +91,37 @@ public class ObjectNodeProcessing {
 				id++;
 			}
 		}
+	}
+	
+	private void createObjectOnSchema(Map.Entry<String, JsonNode> nextField) {
+		schema.put(id, fillNestedMap(nextField.getKey(),
+				jsonNodeType.getTypeAsString()));
+		id++;
+		schema.put(id, fillNestedMap("START OBJECT", "Object Node"));
+		id++;
+		processKidObject(nextField.getValue());
+		schema.put(id, fillNestedMap("END OBJECT", "Object Node"));
+		id++;
+	}
+
+	private void printSchema() {
+		for (Map.Entry<Integer, HashMap<String, String>> entry :
+											schema.entrySet()) {
+			for (Map.Entry<String, String> entryInNestedMap :
+								entry.getValue().entrySet()) {
+				if (entryInNestedMap.getKey().equals("START OBJECT")) {
+					System.out.println("{");
+				} else if (entryInNestedMap.getKey().equals("END OBJECT")) {
+					System.out.println("}");
+				} else if (entryInNestedMap.getKey().equals("START LIST")) {
+					System.out.println("[");
+				} else if (entryInNestedMap.getKey().equals("END LIST")) {
+					System.out.println("]");
+				} else {
+					System.out.println(entryInNestedMap);
+				}
+			}
+		}
+		System.out.println("\n--------\n");
 	}
 }
