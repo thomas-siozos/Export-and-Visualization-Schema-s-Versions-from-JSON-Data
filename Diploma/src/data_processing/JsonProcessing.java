@@ -14,7 +14,7 @@ public class JsonProcessing {
 	
 	public static void main(String[] args) throws JsonParseException, IOException {
 		JsonFactory factory = new JsonFactory();
-		JsonParser parser = factory.createParser(new File("test.json"));
+		JsonParser parser = factory.createParser(new File("test_countries_2_entries.json"));
 		while(hasJsonObject(parser)) {
 			parser.setCodec(new ObjectMapper());
 			JsonNode jsonNode = parser.readValueAsTree();

@@ -28,6 +28,8 @@ public class JsonNodeType {
 				return "ArrayNode";
 			case "ObjectNode":
 				return "ObjectNode";
+			case "BooleanNode":
+				return "BooleanNode";
 			default:
 				System.out.println("Not valid Json Node Type");
 				break;
