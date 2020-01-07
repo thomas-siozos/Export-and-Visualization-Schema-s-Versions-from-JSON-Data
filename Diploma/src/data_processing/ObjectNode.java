@@ -3,7 +3,6 @@ package data_processing;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import javafx.util.Pair;
 
 public class ObjectNode {
@@ -35,6 +34,18 @@ public class ObjectNode {
 		arrays.put(key, array);
 	}
 	
+	public ArrayList<Pair<String, String>> getAllFields() {
+		return allFields;
+	}
+	
+	public HashMap<String, String> getPrimitives() {
+		return primitives;
+	}
+	
+	public HashMap<String, ObjectNode> getObjects() {
+		return objects;
+	}
+	
 	public void printObject(int object_depth) {
 		for (Pair<String, String> pair : allFields) {
 			if (pair.getValue().equals("ObjectNode")) {
@@ -44,7 +55,7 @@ public class ObjectNode {
 				try {
 					searchObjectNode(pair.getKey()).printObject(object_depth);
 				} catch(NullPointerException e) {
-					System.out.println("Can't find this object...");
+					System.out.println("Can't find object with this name...");
 				}
 				object_depth--;
 			} else {
