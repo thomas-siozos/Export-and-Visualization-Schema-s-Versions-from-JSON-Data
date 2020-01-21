@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="lib/jackson-core-2.9.9.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-databind-2.9.9.1.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-dataformat-xml-2.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/Files/Documents/eclipse-workspace/Diploma/lib/org.mockito_2.23.0.v20190527-1420.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

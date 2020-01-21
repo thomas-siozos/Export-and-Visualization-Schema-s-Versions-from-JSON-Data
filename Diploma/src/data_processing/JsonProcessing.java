@@ -15,18 +15,22 @@ public class JsonProcessing {
 	
 	public static ArrayList<ObjectNode> versions = new ArrayList<ObjectNode>();
 	
-	public void processingJsonFile() {
+	public void processingJsonFile(String file) {
 		JsonFactory factory = new JsonFactory();
 		JsonParser parser = null;
 		try {
-			parser = factory.createParser(new File("test_countries_2_entries.json"));
+			parser = factory.createParser(new File(file));
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error on parsing this file...");
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Can't read this file...");
+			System.out.println("Something went realy bad...");
+			e.printStackTrace();
+		} catch (NullPointerException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Can't open this file...");
 			e.printStackTrace();
 		}
 		if (parser != null)
