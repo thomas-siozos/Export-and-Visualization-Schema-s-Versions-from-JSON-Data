@@ -1,0 +1,10 @@
+{
+	"one": 1,
+	"two": 2.0,
+	"three": "3",
+	"four": null,
+	"five": [1, 2, 3],
+	"six": { "one" : 1 },
+	"seven": false,
+	"eight": true
+}

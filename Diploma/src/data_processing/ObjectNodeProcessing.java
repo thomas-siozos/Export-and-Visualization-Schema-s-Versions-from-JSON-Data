@@ -20,7 +20,7 @@ public class ObjectNodeProcessing {
 		return objectNode;
 	}
 	
-	public void processObject(String parent) {
+	public ObjectNode processObject(String parent) {
 		Iterator<Map.Entry<String, JsonNode>> objectIterator = node.fields();
 		Map.Entry<String, JsonNode> nextField;
 		while (objectIterator.hasNext()) {
@@ -44,5 +44,6 @@ public class ObjectNodeProcessing {
 		if (parent.equals("root")) {
 			objectNode.printObject(ROOT_OBJECT_DEPTH);
 		}
+		return objectNode;
 	}
 }

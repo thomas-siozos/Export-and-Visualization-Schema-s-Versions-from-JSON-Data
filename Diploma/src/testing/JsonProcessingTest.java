@@ -1,35 +1,36 @@
 package testing;
 
-import java.io.File;
+import java.io.IOException;
+import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-
+import org.junit.rules.ExpectedException;
+import com.fasterxml.jackson.core.JsonParseException;
 import data_processing.JsonProcessing;
 
 class JsonProcessingTest {
 	
-	private JsonProcessing jsonProcessing;
-	private String file = "abc";
-	@Mock
-	private JsonProcessing json;
+	private JsonProcessing jsonProcessing = new JsonProcessing();
+	private String file;
+	
+	@Rule
+    public ExpectedException thrown = ExpectedException.none();
+	
+	@Test
+	void testParserNullPointerException() {
+		file = "abc";
+		thrown.expect(IOException.class);
+//		Assertions.assertThrows(IOException.class, () -> {
+//			jsonProcessing.processingJsonFile(file);
+//		  });
+	}
 	
 //	@Test
-//	void testFileExistance() {
-//		Assertions.assertThrows(NullPointerException.class, () -> {
+//	void testJsonParseException() {
+//		String file = "testing_files/JsonParseExceptionTestFile.json";
+//		Assertions.assertThrows(JsonParseException.class, () -> {
 //			jsonProcessing.processingJsonFile(file);
 //		  });
 //	}
 	
-	@Test
-	void testIOException() {
-		String file = "test_countries_2_entries.json";
-		File tempFile = new File("test_countries_2_entries.json");
-		boolean exists = tempFile.exists();
-		System.out.println(exists);
-		Assertions.assertThrows(NullPointerException.class, () -> {
-			json.processingJsonFile(file);
-		  });
-	}
-
 }

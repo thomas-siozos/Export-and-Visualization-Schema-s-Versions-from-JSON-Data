@@ -20,13 +20,9 @@ public class JsonProcessing {
 		JsonParser parser = null;
 		try {
 			parser = factory.createParser(new File(file));
-		} catch (JsonParseException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Error on parsing this file...");
-			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Something went realy bad...");
+			System.out.println("IO Exception in JsonParser...");
 			e.printStackTrace();
 		} catch (NullPointerException e) {
 			// TODO Auto-generated catch block
@@ -42,17 +38,23 @@ public class JsonProcessing {
 					jsonNode = parser.readValueAsTree();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
-					System.out.println("Error on reading value as Tree...");
+					System.out.println("IO Exception in JsonNode...");
 					e.printStackTrace();
 				}
 				ObjectNodeProcessing objectNodeProcessing = new ObjectNodeProcessing();
 				objectNodeProcessing.setObjectNode(jsonNode);
-				objectNodeProcessing.processObject("root");
-				versions.add(objectNodeProcessing.getObjectNode());
+				//objectNodeProcessing.processObject("root");
+				versions.add(objectNodeProcessing.processObject("root"));
 			}
 		}
-		VersionComparison v = new VersionComparison(versions.get(0), versions.get(1));
-		v.compareVersions();
+		try {
+			VersionComparison v = new VersionComparison(versions.get(0), versions.get(1));
+			v.compareVersions();
+		} catch (IndexOutOfBoundsException e) {
+			// TODO Auto-generated catch block
+			System.out.println("List 'versions' out of bounds...");
+			e.printStackTrace();
+		}
 //		System.out.println(versions.get(0).getAllFields());
 //		System.out.println("Primitives:");
 //		System.out.println(objectNodes.get(0).getPrimitives());
@@ -62,7 +64,13 @@ public class JsonProcessing {
 	
 	private boolean hasJsonObject(JsonParser parser) {
 		try {
-			if (parser.nextToken() == JsonToken.START_OBJECT) return true;
+			try {
+				if (parser.nextToken() == JsonToken.START_OBJECT) return true;
+			} catch (JsonParseException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Not valid Json Format...");
+				e.printStackTrace();
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
