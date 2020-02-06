@@ -101,20 +101,20 @@ class JsonNodeTypeTest {
 	}
 	
 	private JsonNode openJsonFile(String file) {
-	try {
-		parser = factory.createParser(new File(file));
-	} catch (JsonParseException e) {
-		e.printStackTrace();
-	} catch (IOException e) {
-		e.printStackTrace();
+		try {
+			parser = factory.createParser(new File(file));
+		} catch (JsonParseException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		parser.setCodec(new ObjectMapper());
+		try {
+			jsonNode = parser.readValueAsTree();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return jsonNode;
 	}
-	parser.setCodec(new ObjectMapper());
-	try {
-		jsonNode = parser.readValueAsTree();
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
-	return jsonNode;
-}
 
 }
