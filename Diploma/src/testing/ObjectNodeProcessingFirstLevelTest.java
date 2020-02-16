@@ -18,7 +18,7 @@ import data_processing.ObjectNode;
 import data_processing.ObjectNodeProcessing;
 
 @SuppressWarnings("deprecation")
-class ObjectNodeProcessingRootDepthTest {
+class ObjectNodeProcessingFirstLevelTest {
 
 	private JsonFactory factory;
 	private JsonParser parser;
@@ -36,7 +36,7 @@ class ObjectNodeProcessingRootDepthTest {
 	@Test
 	void runTests() {
 		String file = "testing_files/object_node_processing_tests/"
-				+ "root_depth_test.json";
+				+ "first_level_test.json";
 		objectNodeProcessing.setObjectNode(openJsonFile(file));
 		testAllFields();
 		testPrimitives();
@@ -57,8 +57,13 @@ class ObjectNodeProcessingRootDepthTest {
 	
 	private void testObjects() {
 		HashMap<String, ObjectNode> objects = fillObjects();
-		Assert.assertEquals(objects,
-				objectNodeProcessing.processObject("no_root").getObjects());
+		Assert.assertEquals(objects.get("programming_languages").getAllFields(),
+				objectNodeProcessing.processObject("no_root").
+				getObjects().get("programming_languages").getAllFields());
+		Assert.assertEquals(objects.get("programming_languages").getPrimitives(),
+				objectNodeProcessing.processObject("no_root").
+				getObjects().get("programming_languages").getPrimitives());
+		
 	}
 	
 	private ArrayList<Pair<String, String>> fillAllFields() {
@@ -69,7 +74,7 @@ class ObjectNodeProcessingRootDepthTest {
 		allFields.add(new Pair<>("last_name", "TextNode"));
 		allFields.add(new Pair<>("nickname", "TextNode"));
 		allFields.add(new Pair<>("age", "IntNode"));
-		allFields.add(new Pair<>("programming_languages", "ArrayNode"));
+		allFields.add(new Pair<>("programming_languages", "ObjectNode"));
 		return allFields;
 	}
 	
@@ -80,13 +85,18 @@ class ObjectNodeProcessingRootDepthTest {
 		primitives.put("last_name", "TextNode");
 		primitives.put("nickname", "TextNode");
 		primitives.put("age", "IntNode");
-		primitives.put("programming_languages", "ArrayNode");
 		return primitives;
 	}
 	
 	private HashMap<String, ObjectNode> fillObjects() {
 		HashMap<String, ObjectNode> objects =
 				new HashMap<String, ObjectNode>();
+		ObjectNode objectNode = new ObjectNode();
+		objectNode.addPrimitive("java", "IntNode");
+		objectNode.addPrimitive("python", "IntNode");
+		objectNode.addField("java", "IntNode");
+		objectNode.addField("python", "IntNode");
+		objects.put("programming_languages", objectNode);
 		return objects;
 	}
 	

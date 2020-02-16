@@ -31,7 +31,7 @@ class JsonNodeTypeTest {
 
 	@Test
 	void testIntNode() {
-		String file = "testing_files/JsonNodeTypeTestFile.json";
+		String file = "testing_files/json_node_type_test_file.json";
 		int count = 0;
 		Iterator<Map.Entry<String, JsonNode>> objectIterator =
 										openJsonFile(file).fields();
