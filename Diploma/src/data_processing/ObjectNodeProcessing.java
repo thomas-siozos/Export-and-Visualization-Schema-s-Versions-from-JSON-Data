@@ -10,7 +10,7 @@ public class ObjectNodeProcessing {
 	private JsonNode node;
 	private JsonNodeType jsonNodeType = new JsonNodeType();
 	private ObjectNode objectNode = new ObjectNode();
-	private final int ROOT_OBJECT_DEPTH = 0;
+	//private final int ROOT_OBJECT_DEPTH = 0;
 	
 	public void setObjectNode(JsonNode node) {
 		this.node = node;
@@ -23,6 +23,7 @@ public class ObjectNodeProcessing {
 	public ObjectNode processObject(String parent) {
 		Iterator<Map.Entry<String, JsonNode>> objectIterator = node.fields();
 		Map.Entry<String, JsonNode> nextField;
+		objectNode.setObjectName(parent);
 		while (objectIterator.hasNext()) {
 			nextField = objectIterator.next();
 			jsonNodeType.setJsonNode(nextField.getValue());
@@ -31,7 +32,7 @@ public class ObjectNodeProcessing {
 						jsonNodeType.getTypeAsString());
 				ObjectNodeProcessing object = new ObjectNodeProcessing();
 				object.setObjectNode(nextField.getValue());
-				object.processObject("kid");
+				object.processObject(nextField.getKey());
 				objectNode.addObject(nextField.getKey(),
 						object.getObjectNode());
 			} else {
@@ -41,9 +42,9 @@ public class ObjectNodeProcessing {
 						jsonNodeType.getTypeAsString());
 			}
 		}
-		if (parent.equals("root")) {
-			objectNode.printObject(ROOT_OBJECT_DEPTH);
-		}
+//		if (parent.equals("root")) {
+//			objectNode.printObject(ROOT_OBJECT_DEPTH);
+//		}
 		return objectNode;
 	}
 }

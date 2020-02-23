@@ -8,6 +8,7 @@ import javafx.util.Pair;
 
 public class ObjectNode {
 	
+	private String objectName;
 	private ArrayList<Pair<String, String>> allFields =
 			new ArrayList<Pair<String, String>>();
 	private HashMap<String, String> primitives =
@@ -17,6 +18,14 @@ public class ObjectNode {
 	private HashMap<String, ArrayNode> arrays =
 			new HashMap<String, ArrayNode>();
 	
+	
+	public void setObjectName(String objectName) {
+		this.objectName = objectName;
+	}
+	
+	public String getObjectName() {
+		return objectName;
+	}
 	
 	public void addField(String key, String type) {
 		allFields.add(new Pair<>(key, type));
@@ -66,7 +75,7 @@ public class ObjectNode {
 		}
 	}
 	
-	private ObjectNode searchObjectNode(String key) {
+	public ObjectNode searchObjectNode(String key) {
 		for (Map.Entry<String, ObjectNode> entry : objects.entrySet()) {
 			if (key.equals(entry.getKey())) return entry.getValue();
 		}

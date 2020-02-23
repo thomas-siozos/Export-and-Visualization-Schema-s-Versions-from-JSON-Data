@@ -11,8 +11,17 @@ public class SchemaVersions {
 		schemaVersions.add(objectNode);
 	}
 	
+	public ArrayList<ObjectNode> getSchemaVersions() {
+		return schemaVersions;
+	}
+	
 	public ObjectNode getVersion(int version) {
 		return schemaVersions.get(version);
+	}
+
+	public boolean isEmpty() {
+		if (schemaVersions != null && schemaVersions.isEmpty()) return true;
+		return false;
 	}
 
 }

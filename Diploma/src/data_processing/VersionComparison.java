@@ -4,46 +4,61 @@ import javafx.util.Pair;
 
 public class VersionComparison {
 
-	private ObjectNode oldVersion;
-	private ObjectNode thisVersion;
+	private SchemaVersions versions = new SchemaVersions();
 	
-	public VersionComparison(ObjectNode oldVersion, ObjectNode thisVersion) {
-		this.oldVersion = oldVersion;
-		this.thisVersion = thisVersion;
+	public boolean compareVersions(ObjectNode currentVersion) {
+		if (versions.isEmpty()) {
+			versions.addSchema(currentVersion);
+			return true;
+		}
+		int count_dif_versions = 0;
+		for (ObjectNode version : versions.getSchemaVersions()) {
+			if (compareFields(version, currentVersion) == false) {
+				count_dif_versions++;
+			}
+		}
+		if (count_dif_versions == versions.getSchemaVersions().size()) {
+			versions.addSchema(currentVersion);
+			return true;
+		}
+		return false;
 	}
 	
-	public void compareVersions() {
-		compareObjectVersions(oldVersion, thisVersion);
-	}
-	
-	private void compareObjectVersions(ObjectNode oldVersionObject, ObjectNode thisVersionObject) {
+	private boolean compareFields(ObjectNode version, ObjectNode currentVersion) {
 		int count_same_fields = 0;
-		int count_same_key_type = 0;
-		for (Pair<String, String> oldVersionField : oldVersionObject.getAllFields()) {
-			for (Pair<String, String> thisVersionField : thisVersionObject.getAllFields()) {
-				if (oldVersionField.getKey().equals(thisVersionField.getKey())) {
-					count_same_fields++;
-					//break;
-					//System.out.println(oldVersionField.getKey());
-					if (oldVersionField.getValue().equals(thisVersionField.getValue())) {
-						count_same_key_type++;
-						//break;
+		for (Pair<String, String> currentVersionField :
+				currentVersion.getAllFields()) {
+			if (version.getAllFields().contains(currentVersionField)) {
+				count_same_fields++;
+				if (currentVersionField.getValue().equals("ObjectNode")) {
+					try {
+						if (compareFields(version.searchObjectNode
+								(currentVersionField.getKey()),
+								currentVersion.searchObjectNode
+								(currentVersionField.getKey())) == false ) {
+							return false;
+						}
+					} catch(NullPointerException e) {
+						System.out.println("Can't find object with this name...");
 					}
 				}
+			} else {
+				//System.out.println(currentVersionField.getKey() + " is missing from " + version.getObjectName());
+				return false;
 			}
-			System.out.print(oldVersionField.getValue() + '\t');
 		}
-		System.out.println("\n------");
-		for(Pair<String, String> thisVersionField : thisVersionObject.getAllFields()) {
-			System.out.print(thisVersionField.getValue() + '\t');
-		}
-		System.out.println("\n------");
-		if (count_same_fields == oldVersionObject.getAllFields().size()) {
-			System.out.println("Fields: " + count_same_fields + "...Same with previous version...");
-		}
-		System.out.println(count_same_key_type);
-		if (count_same_key_type == oldVersionObject.getAllFields().size()) {
-			System.out.println("Same types with previous version");
+		if (count_same_fields == version.getAllFields().size()) return true;
+		return false;
+	}
+	
+	public void printVersionsNumber() {
+		System.out.println("Total versions = " + versions.getSchemaVersions().size());
+	}
+	
+	public void printAllVersions() {
+		for (ObjectNode version : versions.getSchemaVersions()) {
+			System.out.println("---------");
+			version.printObject(0);
 		}
 	}
 }
