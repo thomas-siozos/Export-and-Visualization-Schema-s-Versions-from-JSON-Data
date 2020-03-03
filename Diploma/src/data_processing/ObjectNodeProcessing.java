@@ -20,6 +20,10 @@ public class ObjectNodeProcessing {
 		return objectNode;
 	}
 	
+	public void setId(int id) {
+		objectNode.setId(id);
+	}
+	
 	public ObjectNode processObject(String parent) {
 		Iterator<Map.Entry<String, JsonNode>> objectIterator = node.fields();
 		Map.Entry<String, JsonNode> nextField;
@@ -32,7 +36,7 @@ public class ObjectNodeProcessing {
 						jsonNodeType.getTypeAsString());
 				ObjectNodeProcessing object = new ObjectNodeProcessing();
 				object.setObjectNode(nextField.getValue());
-				object.processObject(nextField.getKey());
+				object.processObject(parent + "/" + nextField.getKey());
 				objectNode.addObject(nextField.getKey(),
 						object.getObjectNode());
 			} else {

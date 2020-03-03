@@ -5,6 +5,9 @@ import javafx.util.Pair;
 public class VersionComparison {
 
 	private SchemaVersions versions = new SchemaVersions();
+	private final int ROOT_OBJECT_DEPTH = 0;
+	private final String ADDED_FIELD = "+";
+	private final String REMOVED_FIELD = "-";
 	
 	public boolean compareVersions(ObjectNode currentVersion) {
 		if (versions.isEmpty()) {
@@ -18,13 +21,21 @@ public class VersionComparison {
 			}
 		}
 		if (count_dif_versions == versions.getSchemaVersions().size()) {
+			//System.out.println("Version added at: " + currentVersion.getId());
+			if (versions.getSchemaVersionsSize() >= 1) {
+				SchemaChanges schemaChanges =
+						new SchemaChanges(versions.getLastVersion(),
+											currentVersion);
+				versions.addChanges(schemaChanges.getChanges());
+			}
 			versions.addSchema(currentVersion);
 			return true;
 		}
 		return false;
 	}
 	
-	private boolean compareFields(ObjectNode version, ObjectNode currentVersion) {
+	private boolean compareFields(ObjectNode version,
+			ObjectNode currentVersion) {
 		int count_same_fields = 0;
 		for (Pair<String, String> currentVersionField :
 				currentVersion.getAllFields()) {
@@ -39,11 +50,11 @@ public class VersionComparison {
 							return false;
 						}
 					} catch(NullPointerException e) {
-						System.out.println("Can't find object with this name...");
+						System.out.println("Can't find object " +
+									"with this name...");
 					}
 				}
 			} else {
-				//System.out.println(currentVersionField.getKey() + " is missing from " + version.getObjectName());
 				return false;
 			}
 		}
@@ -52,13 +63,33 @@ public class VersionComparison {
 	}
 	
 	public void printVersionsNumber() {
-		System.out.println("Total versions = " + versions.getSchemaVersions().size());
+		System.out.println("\nTotal versions = " +
+					versions.getSchemaVersions().size());
 	}
 	
 	public void printAllVersions() {
+		int i = 0;
 		for (ObjectNode version : versions.getSchemaVersions()) {
-			System.out.println("---------");
-			version.printObject(0);
+			System.out.println("\n- - - - - - - -\n");
+			System.out.println("\nVersion added at: " +
+					version.getId() + "\n");
+			if (i >= 1) {
+				System.out.println("\nChanges:\n");
+				for (Field field : versions.getVersionChanges(i - 1)) {
+					if (field.getAct().equals(ADDED_FIELD)) {
+						System.out.println(field.getParent() + "/" +
+								field.getKey() + " : " + field.getValue() +
+								"\tAdded");
+					} else if (field.getAct().equals(REMOVED_FIELD)) {
+						System.out.println(field.getParent() + "/" +
+								field.getKey() + " : " + field.getValue() +
+								"\tRemoved");
+					}
+				}
+				System.out.println("\n");
+			}
+			version.printObject(ROOT_OBJECT_DEPTH);
+			i++;
 		}
 	}
 }

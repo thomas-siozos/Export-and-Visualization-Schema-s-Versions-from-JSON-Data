@@ -9,6 +9,7 @@ import javafx.util.Pair;
 public class ObjectNode {
 	
 	private String objectName;
+	private int id;
 	private ArrayList<Pair<String, String>> allFields =
 			new ArrayList<Pair<String, String>>();
 	private HashMap<String, String> primitives =
@@ -25,6 +26,14 @@ public class ObjectNode {
 	
 	public String getObjectName() {
 		return objectName;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public void addField(String key, String type) {
@@ -46,6 +55,22 @@ public class ObjectNode {
 	
 	public ArrayList<Pair<String, String>> getAllFields() {
 		return allFields;
+	}
+	
+	public ArrayList<String> getAllFieldsKeys() {
+		ArrayList<String> keys = new ArrayList<String>();
+		for (Pair<String, String> field : allFields) {
+			keys.add(field.getKey());
+		}
+		return keys;
+	}
+	
+	public ArrayList<String> getAllFieldsValues() {
+		ArrayList<String> values = new ArrayList<String>();
+		for (Pair<String, String> field : allFields) {
+			values.add(field.getValue());
+		}
+		return values;
 	}
 	
 	public HashMap<String, String> getPrimitives() {
@@ -88,5 +113,5 @@ public class ObjectNode {
 		for (int i = 0; i < object_depth; i++) tabs.append("\t");
 		return tabs.toString();
 	}
-
+	
 }

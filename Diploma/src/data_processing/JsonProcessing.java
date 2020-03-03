@@ -13,6 +13,7 @@ public class JsonProcessing {
 	
 	
 	private VersionComparison versionComparison = new VersionComparison();
+	private int id = 1;
 	
 	public void processingJsonFile(String file) {
 		JsonFactory factory = new JsonFactory();
@@ -43,11 +44,13 @@ public class JsonProcessing {
 				ObjectNodeProcessing objectNodeProcessing =
 						new ObjectNodeProcessing();
 				objectNodeProcessing.setObjectNode(jsonNode);
+				objectNodeProcessing.setId(id);
 				//objectNodeProcessing.processObject("root");
 //				versionComparison.setCurrentVersion(objectNodeProcessing
 //								.processObject("root"));
 				versionComparison.compareVersions(objectNodeProcessing
 						.processObject("root"));
+				id++;
 			}
 		}
 		versionComparison.printAllVersions();
