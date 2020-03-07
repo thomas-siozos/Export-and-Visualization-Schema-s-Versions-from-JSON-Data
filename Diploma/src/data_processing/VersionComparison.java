@@ -21,7 +21,6 @@ public class VersionComparison {
 			}
 		}
 		if (count_dif_versions == versions.getSchemaVersions().size()) {
-			//System.out.println("Version added at: " + currentVersion.getId());
 			if (versions.getSchemaVersionsSize() >= 1) {
 				SchemaChanges schemaChanges =
 						new SchemaChanges(versions.getLastVersion(),
@@ -50,7 +49,8 @@ public class VersionComparison {
 							return false;
 						}
 					} catch(NullPointerException e) {
-						System.out.println("Can't find object " +
+						System.out.println("Class: VersionComparison, " +
+									"can't find object " +
 									"with this name...");
 					}
 				}
@@ -68,14 +68,15 @@ public class VersionComparison {
 	}
 	
 	public void printAllVersions() {
-		int i = 0;
+		int count_versions = 0;
 		for (ObjectNode version : versions.getSchemaVersions()) {
 			System.out.println("\n- - - - - - - -\n");
 			System.out.println("\nVersion added at: " +
 					version.getId() + "\n");
-			if (i >= 1) {
+			if (count_versions >= 1) {
 				System.out.println("\nChanges:\n");
-				for (Field field : versions.getVersionChanges(i - 1)) {
+				for (Field field :
+					versions.getVersionChanges(count_versions - 1)) {
 					if (field.getAct().equals(ADDED_FIELD)) {
 						System.out.println(field.getParent() + "/" +
 								field.getKey() + " : " + field.getValue() +
@@ -89,7 +90,7 @@ public class VersionComparison {
 				System.out.println("\n");
 			}
 			version.printObject(ROOT_OBJECT_DEPTH);
-			i++;
+			count_versions++;
 		}
 	}
 }

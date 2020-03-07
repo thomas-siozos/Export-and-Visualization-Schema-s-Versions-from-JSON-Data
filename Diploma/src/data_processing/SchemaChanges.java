@@ -44,7 +44,8 @@ public class SchemaChanges {
 								(currentVersionField.getKey()));
 						changes.addAll(nestedOb);
 					} catch(NullPointerException e) {
-						System.out.println("Can't find object " +
+						System.out.println("Class: SchemaChanges, " +
+									"Can't find object " +
 									"with this name...");
 					}
 				} 

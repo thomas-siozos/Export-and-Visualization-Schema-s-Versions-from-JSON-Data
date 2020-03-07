@@ -33,7 +33,6 @@ public class JsonNodeType {
 			default:
 				System.out.println("Not valid Json Node Type");
 				break;
-			
 		}
 		return null;
 	}

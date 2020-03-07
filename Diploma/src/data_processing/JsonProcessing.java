@@ -21,11 +21,9 @@ public class JsonProcessing {
 		try {
 			parser = factory.createParser(new File(file));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("IO Exception in JsonParser...");
 			e.printStackTrace();
 		} catch (NullPointerException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Can't open this file...");
 			e.printStackTrace();
 		}
@@ -37,7 +35,6 @@ public class JsonProcessing {
 				try {
 					jsonNode = parser.readValueAsTree();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					System.out.println("IO Exception in JsonNode...");
 					e.printStackTrace();
 				}
@@ -45,9 +42,6 @@ public class JsonProcessing {
 						new ObjectNodeProcessing();
 				objectNodeProcessing.setObjectNode(jsonNode);
 				objectNodeProcessing.setId(id);
-				//objectNodeProcessing.processObject("root");
-//				versionComparison.setCurrentVersion(objectNodeProcessing
-//								.processObject("root"));
 				versionComparison.compareVersions(objectNodeProcessing
 						.processObject("root"));
 				id++;
@@ -62,12 +56,10 @@ public class JsonProcessing {
 			try {
 				if (parser.nextToken() == JsonToken.START_OBJECT) return true;
 			} catch (JsonParseException e) {
-				// TODO Auto-generated catch block
 				System.out.println("Not valid Json Format...");
 				e.printStackTrace();
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
