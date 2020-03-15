@@ -3,23 +3,33 @@ package data_processing;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import javafx.util.Pair;
 
 public class ObjectNode {
 	
 	private String objectName;
 	private int id;
-	private ArrayList<Pair<String, String>> allFields =
-			new ArrayList<Pair<String, String>>();
-	private HashMap<String, String> primitives =
-			new HashMap<String, String>();
-	private HashMap<String, ObjectNode> objects =
-			new HashMap<String, ObjectNode>();
-	private HashMap<String, ArrayNode> arrays =
-			new HashMap<String, ArrayNode>();
+	private ArrayList<Pair<String, String>> allFields;
+	private HashMap<String, ObjectNode> objects;
 	
+	public ObjectNode() {
+		objectName = null;
+		id = -1;
+		allFields = new ArrayList<Pair<String, String>>();
+		objects = new HashMap<String, ObjectNode>();
+	}
 	
+	public ObjectNode(ObjectNode objectNode) {
+		objectName = objectNode.getObjectName();
+		id = objectNode.getId();
+		allFields = objectNode.getAllFields();
+		objects = objectNode.getObjects();
+	}
+	
+	public ObjectNode getObjectNode() {
+		return this;
+	}
+
 	public void setObjectName(String objectName) {
 		this.objectName = objectName;
 	}
@@ -41,63 +51,43 @@ public class ObjectNode {
 		
 	}
 	
-	public void addPrimitive(String key, String type) {
-		primitives.put(key, type);
-	}
-	
 	public void addObject(String key, ObjectNode object) {
 		objects.put(key, object);
-	}
-	
-	public void addArray(String key, ArrayNode array) {
-		arrays.put(key, array);
 	}
 	
 	public ArrayList<Pair<String, String>> getAllFields() {
 		return allFields;
 	}
 	
-	public ArrayList<String> getAllFieldsKeys() {
-		ArrayList<String> keys = new ArrayList<String>();
-		for (Pair<String, String> field : allFields) {
-			keys.add(field.getKey());
-		}
-		return keys;
-	}
-	
-	public ArrayList<String> getAllFieldsValues() {
-		ArrayList<String> values = new ArrayList<String>();
-		for (Pair<String, String> field : allFields) {
-			values.add(field.getValue());
-		}
-		return values;
-	}
-	
-	public HashMap<String, String> getPrimitives() {
-		return primitives;
-	}
-	
 	public HashMap<String, ObjectNode> getObjects() {
 		return objects;
 	}
 	
-	public void printObject(int object_depth) {
+	public String printObject(int object_depth) {
+		StringBuilder output = new StringBuilder();
+		output.append("");
 		for (Pair<String, String> pair : allFields) {
 			if (pair.getValue().equals("ObjectNode")) {
-				System.out.println(getTabs(object_depth) + pair.getKey() +
-							" : " + pair.getValue());
+				output.append(getTabs(object_depth) + pair.getKey() +
+						" : " + pair.getValue() + "\n");
+				/*System.out.println(getTabs(object_depth) + pair.getKey() +
+						" : " + pair.getValue()); */
 				object_depth++;
 				try {
-					searchObjectNode(pair.getKey()).printObject(object_depth);
+					output.append(searchObjectNode(pair.getKey())
+							.printObject(object_depth));
 				} catch(NullPointerException e) {
 					System.out.println("Can't find object with this name...");
 				}
 				object_depth--;
 			} else {
-				System.out.println(getTabs(object_depth) + pair.getKey() +
-							" : " + pair.getValue());
+				/* System.out.println(getTabs(object_depth) + pair.getKey() +
+							" : " + pair.getValue()); */
+				output.append(getTabs(object_depth) + pair.getKey() +
+						" : " + pair.getValue() + "\n");
 			}
 		}
+		return output.toString();
 	}
 	
 	public ObjectNode searchObjectNode(String key) {

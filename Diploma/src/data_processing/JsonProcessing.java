@@ -2,6 +2,7 @@ package data_processing;
 
 import java.io.File;
 import java.io.IOException;
+
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
@@ -12,8 +13,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class JsonProcessing {
 	
 	
-	private VersionComparison versionComparison = new VersionComparison();
+	private SchemaHistory schemaHistory;
+	private VersionComparison versionComparison;
+	ObjectNodeProcessing objectNodeProcessing;
 	private int id = 1;
+	
+	public JsonProcessing() {
+		schemaHistory = new SchemaHistory();
+		versionComparison = new VersionComparison();
+	}
 	
 	public void processingJsonFile(String file) {
 		JsonFactory factory = new JsonFactory();
@@ -38,17 +46,17 @@ public class JsonProcessing {
 					System.out.println("IO Exception in JsonNode...");
 					e.printStackTrace();
 				}
-				ObjectNodeProcessing objectNodeProcessing =
-						new ObjectNodeProcessing();
+				objectNodeProcessing = new ObjectNodeProcessing();
 				objectNodeProcessing.setObjectNode(jsonNode);
 				objectNodeProcessing.setId(id);
-				versionComparison.compareVersions(objectNodeProcessing
-						.processObject("root"));
+				ObjectNode currentObject = objectNodeProcessing
+						.processObject("root");
+				versionComparison.compareVersions(schemaHistory, currentObject);
 				id++;
 			}
 		}
-		versionComparison.printAllVersions();
-		versionComparison.printVersionsNumber();
+		schemaHistory.printAllVersions();
+		schemaHistory.printVersionsNumber();
 	}
 	
 	private boolean hasJsonObject(JsonParser parser) {

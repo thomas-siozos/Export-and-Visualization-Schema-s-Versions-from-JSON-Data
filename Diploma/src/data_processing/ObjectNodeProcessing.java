@@ -41,8 +41,6 @@ public class ObjectNodeProcessing {
 			} else {
 				objectNode.addField(nextField.getKey(),
 						jsonNodeType.getTypeAsString());
-				objectNode.addPrimitive(nextField.getKey(),
-						jsonNodeType.getTypeAsString());
 			}
 		}
 		return objectNode;

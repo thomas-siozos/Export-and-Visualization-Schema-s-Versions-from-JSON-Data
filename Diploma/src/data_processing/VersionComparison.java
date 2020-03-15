@@ -3,31 +3,35 @@ package data_processing;
 import javafx.util.Pair;
 
 public class VersionComparison {
-
-	private SchemaVersions versions = new SchemaVersions();
-	private final int ROOT_OBJECT_DEPTH = 0;
-	private final String ADDED_FIELD = "+";
-	private final String REMOVED_FIELD = "-";
 	
-	public boolean compareVersions(ObjectNode currentVersion) {
-		if (versions.isEmpty()) {
-			versions.addSchema(currentVersion);
+	private SchemaDifference schemaDifference;
+	
+	public VersionComparison() {
+		schemaDifference = null;
+	}
+
+	public boolean compareVersions(SchemaHistory schemaHistory,
+					ObjectNode currentVersion) {
+		int count_dif_versions = 0;
+		if (schemaHistory.isEmpty()) {
+			Schema schema = new Schema(currentVersion);
+			schemaHistory.addSchema(schema);
 			return true;
 		}
-		int count_dif_versions = 0;
-		for (ObjectNode version : versions.getSchemaVersions()) {
-			if (compareFields(version, currentVersion) == false) {
+		for (Schema version : schemaHistory.getSchemaVersions()) {
+			if (compareFields(version.getObjectNode(), currentVersion) == false) {
 				count_dif_versions++;
 			}
 		}
-		if (count_dif_versions == versions.getSchemaVersions().size()) {
-			if (versions.getSchemaVersionsSize() >= 1) {
-				SchemaChanges schemaChanges =
-						new SchemaChanges(versions.getLastVersion(),
+		if (count_dif_versions == schemaHistory.getSchemaVersions().size()) {
+			if (schemaHistory.getSchemaVersionsSize() >= 1) {
+				schemaDifference =
+						new SchemaDifference(schemaHistory.getLastVersion().getObjectNode(),
 											currentVersion);
-				versions.addChanges(schemaChanges.getChanges());
+				Schema schema = new Schema(currentVersion);
+				schema.addChanges(schemaDifference.getChanges());
+				schemaHistory.addSchema(schema);
 			}
-			versions.addSchema(currentVersion);
 			return true;
 		}
 		return false;
@@ -60,37 +64,5 @@ public class VersionComparison {
 		}
 		if (count_same_fields == version.getAllFields().size()) return true;
 		return false;
-	}
-	
-	public void printVersionsNumber() {
-		System.out.println("\nTotal versions = " +
-					versions.getSchemaVersions().size());
-	}
-	
-	public void printAllVersions() {
-		int count_versions = 0;
-		for (ObjectNode version : versions.getSchemaVersions()) {
-			System.out.println("\n- - - - - - - -\n");
-			System.out.println("\nVersion added at: " +
-					version.getId() + "\n");
-			if (count_versions >= 1) {
-				System.out.println("\nChanges:\n");
-				for (Field field :
-					versions.getVersionChanges(count_versions - 1)) {
-					if (field.getAct().equals(ADDED_FIELD)) {
-						System.out.println(field.getParent() + "/" +
-								field.getKey() + " : " + field.getValue() +
-								"\tAdded");
-					} else if (field.getAct().equals(REMOVED_FIELD)) {
-						System.out.println(field.getParent() + "/" +
-								field.getKey() + " : " + field.getValue() +
-								"\tRemoved");
-					}
-				}
-				System.out.println("\n");
-			}
-			version.printObject(ROOT_OBJECT_DEPTH);
-			count_versions++;
-		}
 	}
 }
