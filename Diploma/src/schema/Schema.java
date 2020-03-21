@@ -1,6 +1,8 @@
-package data_processing;
+package schema;
 
 import java.util.ArrayList;
+import data_processing.AtomicFieldChange;
+import data_processing.ObjectNode;
 
 public class Schema extends ObjectNode {
 	
@@ -18,5 +20,4 @@ public class Schema extends ObjectNode {
 	public ArrayList<AtomicFieldChange> getChanges() {
 		return changes;
 	}
-
 }

@@ -70,8 +70,6 @@ public class ObjectNode {
 			if (pair.getValue().equals("ObjectNode")) {
 				output.append(getTabs(object_depth) + pair.getKey() +
 						" : " + pair.getValue() + "\n");
-				/*System.out.println(getTabs(object_depth) + pair.getKey() +
-						" : " + pair.getValue()); */
 				object_depth++;
 				try {
 					output.append(searchObjectNode(pair.getKey())
@@ -81,8 +79,6 @@ public class ObjectNode {
 				}
 				object_depth--;
 			} else {
-				/* System.out.println(getTabs(object_depth) + pair.getKey() +
-							" : " + pair.getValue()); */
 				output.append(getTabs(object_depth) + pair.getKey() +
 						" : " + pair.getValue() + "\n");
 			}

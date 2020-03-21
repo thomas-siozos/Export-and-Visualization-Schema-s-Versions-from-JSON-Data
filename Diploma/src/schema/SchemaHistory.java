@@ -1,6 +1,9 @@
-package data_processing;
+package schema;
 
+import java.io.File;
 import java.util.ArrayList;
+import data_processing.AtomicFieldChange;
+import output.VersionFile;
 
 public class SchemaHistory {
 	
@@ -9,10 +12,17 @@ public class SchemaHistory {
 	private final int ROOT_OBJECT_DEPTH = 0;
 	private final String ADDED_FIELD = "+";
 	private final String REMOVED_FIELD = "-";
+	private String file;
+	private VersionFile versionFile;
 	
 	public SchemaHistory() {
 		schemaVersions = new ArrayList<Schema>();
 		changes = new ArrayList<ArrayList<AtomicFieldChange>>();
+		file = null;
+	}
+	
+	public void setFile(String file) {
+		this.file = file;
 	}
 
 	public void addSchema(Schema schema) {
@@ -49,34 +59,47 @@ public class SchemaHistory {
 	}
 	
 	public void printVersionsNumber() {
-		System.out.println("\nTotal versions = " +
+		System.out.println("Total versions = " +
 				schemaVersions.size());
 	}
 	
-	public void printAllVersions() {
+	public boolean createOutputFiles() {
 		int count_versions = 0;
+		StringBuilder contents;
+		versionFile = new VersionFile(file);
+		versionFile.createDirectory();
+		File directory = versionFile.getDirectory();
 		for (Schema version : schemaVersions) {
-			System.out.println("\n- - - - - - - -\n");
-			System.out.println("\nVersion added at: " +
+			contents = new StringBuilder();
+			versionFile = new VersionFile(file);
+			versionFile.setDirectory(directory);
+			versionFile.setId(count_versions);
+			contents.append("Version added at: " +
 					version.getId() + "\n");
 			if (count_versions >= 1) {
-				System.out.println("\nChanges:\n");
+				contents.append("\nChanges:\n");
 				for (AtomicFieldChange atomicFieldChange :
 						version.getChanges()) {
 					if (atomicFieldChange.getAct().equals(ADDED_FIELD)) {
-						System.out.println(atomicFieldChange.getParent() + "/" +
-								atomicFieldChange.getKey() + " : " + atomicFieldChange.getValue() +
-								"\tAdded");
+						contents.append(atomicFieldChange.getParent() + "/" +
+								atomicFieldChange.getKey() + " : "
+								+ atomicFieldChange.getValue() + "\tAdded\n");
 					} else if (atomicFieldChange.getAct().equals(REMOVED_FIELD)) {
-						System.out.println(atomicFieldChange.getParent() + "/" +
-								atomicFieldChange.getKey() + " : " + atomicFieldChange.getValue() +
-								"\tRemoved");
+						contents.append(atomicFieldChange.getParent() + "/" +
+								atomicFieldChange.getKey() + " : "
+								+ atomicFieldChange.getValue() + "\tRemoved\n");
 					}
 				}
-				System.out.println("\n");
+				contents.append("\n");
 			}
-			System.out.println(version.printObject(ROOT_OBJECT_DEPTH));
+			contents.append(version.printObject(ROOT_OBJECT_DEPTH));
+			if (!versionFile.createVersionFile(contents.toString())) {
+				System.out.println("File: version_"
+					+ Integer.toString(count_versions) + ", wasn't created...");
+				return false;
+			}
 			count_versions++;
 		}
+		return true;
 	}
 }

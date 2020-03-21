@@ -2,13 +2,13 @@ package data_processing;
 
 import java.io.File;
 import java.io.IOException;
-
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import schema.SchemaHistory;
 
 public class JsonProcessing {
 	
@@ -16,11 +16,12 @@ public class JsonProcessing {
 	private SchemaHistory schemaHistory;
 	private VersionComparison versionComparison;
 	ObjectNodeProcessing objectNodeProcessing;
-	private int id = 1;
+	private int id;
 	
 	public JsonProcessing() {
 		schemaHistory = new SchemaHistory();
 		versionComparison = new VersionComparison();
+		id = 1;
 	}
 	
 	public void processingJsonFile(String file) {
@@ -55,8 +56,14 @@ public class JsonProcessing {
 				id++;
 			}
 		}
-		schemaHistory.printAllVersions();
+		schemaHistory.setFile(file);
 		schemaHistory.printVersionsNumber();
+		if (schemaHistory.createOutputFiles()) {
+			System.out.println("All Version Files Created Successfully...");
+		} else {
+			System.out.println("An error occurred while "
+					+ "creating version files...");
+		}
 	}
 	
 	private boolean hasJsonObject(JsonParser parser) {
@@ -72,5 +79,4 @@ public class JsonProcessing {
 		}
 		return false;
 	}
-
 }

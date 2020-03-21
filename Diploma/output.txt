@@ -1,14 +1,4 @@
-
-- - - - - - - -
-
-
-Version added at: 1
-
-user_id : TextNode
-business_id : TextNode
-text : TextNode
-date : TextNode
-compliment_count : IntNode
-
-
 Total versions = 1
+Creating directory: review_json_versions
+Directory created successfully...
+All Version Files Created Successfully...
