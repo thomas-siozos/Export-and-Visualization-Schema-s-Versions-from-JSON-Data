@@ -8,6 +8,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import json_output.OutputFile;
 import schema.SchemaHistory;
 
 public class JsonProcessing {
@@ -16,6 +17,7 @@ public class JsonProcessing {
 	private SchemaHistory schemaHistory;
 	private VersionComparison versionComparison;
 	ObjectNodeProcessing objectNodeProcessing;
+	private OutputFile outputFile;
 	private int id;
 	
 	public JsonProcessing() {
@@ -63,6 +65,11 @@ public class JsonProcessing {
 		} else {
 			System.out.println("An error occurred while "
 					+ "creating version files...");
+		}
+		outputFile = new OutputFile(schemaHistory);
+		outputFile.setPath(file);
+		if (outputFile.createOutputFiles()) {
+			System.out.println("All json output files created successfully...");
 		}
 	}
 	

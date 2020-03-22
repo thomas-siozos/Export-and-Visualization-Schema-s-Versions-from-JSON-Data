@@ -7,9 +7,15 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class ObjectNodeProcessing {
 	
 	private JsonNode node;
-	private JsonNodeType jsonNodeType = new JsonNodeType();
-	private ObjectNode objectNode = new ObjectNode();
+	private JsonNodeType jsonNodeType;
+	private ObjectNode objectNode;
 	
+	public ObjectNodeProcessing() {
+		node = null;
+		jsonNodeType = new JsonNodeType();
+		objectNode = new ObjectNode();
+	}
+
 	public void setObjectNode(JsonNode node) {
 		this.node = node;
 	}
