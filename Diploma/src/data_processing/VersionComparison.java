@@ -29,8 +29,8 @@ public class VersionComparison {
 		if (count_dif_versions == schemaHistory.getSchemaVersions().size()) {
 			if (schemaHistory.getSchemaVersionsSize() >= 1) {
 				schemaDifference =
-						new SchemaDifference(schemaHistory.getLastVersion().getObjectNode(),
-											currentVersion);
+						new SchemaDifference(schemaHistory.getLastVersion()
+								.getObjectNode(),currentVersion);
 				Schema schema = new Schema(currentVersion);
 				schema.addChanges(schemaDifference.getChanges());
 				schemaHistory.addSchema(schema);

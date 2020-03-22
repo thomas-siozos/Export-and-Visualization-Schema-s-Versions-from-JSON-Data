@@ -5,13 +5,13 @@ import java.nio.file.Paths;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import schema.Schema;
 
-public class OutputFile {
+public class JsonOutputFile {
 	
 	private SchemaHistory schemaHistory;
 	private String path;
 	private JsonObject jsonObject;
 	
-	public OutputFile(SchemaHistory schemaHistory) {
+	public JsonOutputFile(SchemaHistory schemaHistory) {
 		this.schemaHistory = schemaHistory;
 		path = null;
 		jsonObject = new JsonObject();
@@ -40,5 +40,4 @@ public class OutputFile {
 		}
 		return true;
 	}
-
 }
