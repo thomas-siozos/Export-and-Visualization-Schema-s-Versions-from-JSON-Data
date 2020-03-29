@@ -1,0 +1,8 @@
+JMH S 22 org.sample.MyBenchmark S 56 org.sample.generated.MyBenchmark_testGsonBigFile_jmhTest S 15 testGsonBigFile S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 59 org.sample.generated.MyBenchmark_testJacksonBigFile_jmhTest S 18 testJacksonBigFile S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 57 org.sample.generated.MyBenchmark_testJSONPBigFile_jmhTest S 16 testJSONPBigFile S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 49 org.sample.generated.MyBenchmark_testGson_jmhTest S 8 testGson S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 52 org.sample.generated.MyBenchmark_testJackson_jmhTest S 11 testJackson S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 50 org.sample.generated.MyBenchmark_testJSONP_jmhTest S 9 testJSONP S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 62 org.sample.generated.MyBenchmark_testJsonSimpleBigFile_jmhTest S 21 testJsonSimpleBigFile S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 55 org.sample.generated.MyBenchmark_testJsonSimple_jmhTest S 14 testJsonSimple S 11 AverageTime I 1 1 A 1 1 1 E I 1 5 T 3 5 s E I 2 10 T 4 5 ms E E E E E E E E U 12 MILLISECONDS E E 

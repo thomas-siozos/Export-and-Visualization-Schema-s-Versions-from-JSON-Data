@@ -1,0 +1,13 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,org/sample/MyBenchmark.testGson
+inline,org/sample/MyBenchmark.testGsonBigFile
+inline,org/sample/MyBenchmark.testJSONP
+inline,org/sample/MyBenchmark.testJSONPBigFile
+inline,org/sample/MyBenchmark.testJackson
+inline,org/sample/MyBenchmark.testJacksonBigFile
+inline,org/sample/MyBenchmark.testJsonSimple
+inline,org/sample/MyBenchmark.testJsonSimpleBigFile
