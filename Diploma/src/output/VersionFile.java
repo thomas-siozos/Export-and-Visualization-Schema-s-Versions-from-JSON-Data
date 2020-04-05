@@ -7,10 +7,6 @@ import java.io.UnsupportedEncodingException;
 public class VersionFile extends VersionDirectory {
 	
 	private int version_number;
-
-	public VersionFile(String file) {
-		super(file);
-	}
 	
 	public void setId(int version_number) {
 		this.version_number = version_number;

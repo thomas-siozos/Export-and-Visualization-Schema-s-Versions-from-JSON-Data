@@ -63,26 +63,30 @@ public class ObjectNode {
 		return objects;
 	}
 	
-	public String printObject(int object_depth) {
+	public String printObject(int object_depth, boolean root) {
 		StringBuilder output = new StringBuilder();
 		output.append("");
+		output.append("{\n");
+		object_depth++;
 		for (Pair<String, String> pair : allFields) {
 			if (pair.getValue().equals("ObjectNode")) {
-				output.append(getTabs(object_depth) + pair.getKey() +
-						" : " + pair.getValue() + "\n");
+				output.append(getTabs(object_depth) + '"' + pair.getKey() + '"'
+						+ " : ");
 				object_depth++;
 				try {
 					output.append(searchObjectNode(pair.getKey())
-							.printObject(object_depth));
+							.printObject(object_depth, false));
 				} catch(NullPointerException e) {
 					System.out.println("Can't find object with this name...");
 				}
 				object_depth--;
+				output.append(getTabs(object_depth) + "},\n");
 			} else {
-				output.append(getTabs(object_depth) + pair.getKey() +
-						" : " + pair.getValue() + "\n");
+				output.append(getTabs(object_depth) + '"' + pair.getKey() + '"'
+						+ " : " + '"' + pair.getValue() + '"' + "," + "\n");
 			}
 		}
+		if (root == true) output.append(getTabs(object_depth-2) + "};\n");
 		return output.toString();
 	}
 	

@@ -4,17 +4,10 @@ import java.io.File;
 
 public abstract class VersionDirectory {
 	
-	private String file;
 	private File directory;
 	
-	public VersionDirectory(String file) {
-		this.file = file;
-	}
-	
 	public boolean createDirectory() {
-		file = file.replace(".", "_");
-		file = file.replace("data/", "");
-		String path = file + "_versions";
+		String path = "output";
 		directory = new File(path);
 		System.out.println("Creating directory: " + directory.getName());
 		boolean result = false;

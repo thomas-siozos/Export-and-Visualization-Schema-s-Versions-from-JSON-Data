@@ -19,7 +19,7 @@ public class ObjectNodeProcessing {
 	public void setObjectNode(JsonNode node) {
 		this.node = node;
 	}
-	
+
 	public ObjectNode getObjectNode() {
 		return objectNode;
 	}

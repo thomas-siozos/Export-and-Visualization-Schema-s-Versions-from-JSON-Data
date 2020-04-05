@@ -1,0 +1,22 @@
+{
+	"name" : "Thomas",
+	"lastname" : "Siozos",
+	"age" : 24,
+	"languages" : ["Greek", "English"],
+	"email" : "siozosthomass@gmail.com",
+	"address" : {"road" : "abc",
+				"number" : 8 },
+	"married" : false,
+	"kids" : null
+}
+{
+	"name" : "Georgia",
+	"lastname" : "Kalitsi",
+	"age" : 21,
+	"languages" : ["Greek", "English"],
+	"email" : "gkalitsi@gmail.com",
+	"address" : {"road" : "abc",
+				"number" : 8 },
+	"married" : false,
+	"kids" : 0
+}

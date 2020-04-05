@@ -27,18 +27,23 @@ class ObjectNodeProcessingTest {
 	private ArrayList<Pair<String, String>> allFields;
 	
 	@BeforeAll
-	public static void setUp() {
+	public static void setUpBeforeClass() {
 		System.out.println("Testing JsonNodeType class...\n");
 	}
 
 	@BeforeEach
-	public void init() {
+	public void setUp() {
 		file = "tests/object_node_test.json";
 		factory = new JsonFactory();
 		parser = null;
 		objectNodeProcessing = new ObjectNodeProcessing();
 		allFields = new ArrayList<Pair<String, String>>();
 		fillAllFields();
+	}
+	
+	@AfterEach
+	public void clear() {
+		allFields.clear();
 	}
 	
 	private void fillAllFields() {
@@ -116,11 +121,6 @@ class ObjectNodeProcessingTest {
 				searchObjectNode("address").getAllFields()) {
 			System.out.println(field.getKey() + " : " + field.getValue());
 		}
-	}
-	
-	@AfterEach
-	public void clear() {
-		allFields.clear();
 	}
 
 }

@@ -8,15 +8,14 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import json_output.JsonOutputFile;
 import schema.SchemaHistory;
 
 public class JsonProcessing {
 	
 	private SchemaHistory schemaHistory;
 	private VersionComparison versionComparison;
-	ObjectNodeProcessing objectNodeProcessing;
-	private JsonOutputFile jsonOutputFile;
+	private ObjectNodeProcessing objectNodeProcessing;
+	//private JsonOutputFile jsonOutputFile;
 	private int id;
 	
 	public JsonProcessing() {
@@ -37,8 +36,7 @@ public class JsonProcessing {
 			System.out.println("Can't open this file...");
 			e.printStackTrace();
 		}
-		if (parser != null)
-		{
+		if (parser != null) {
 			while(hasJsonObject(parser)) {
 				parser.setCodec(new ObjectMapper());
 				JsonNode jsonNode = null;
@@ -57,7 +55,7 @@ public class JsonProcessing {
 				id++;
 			}
 		}
-		schemaHistory.setFile(file);
+		System.out.println(file);
 		schemaHistory.printVersionsNumber();
 		if (schemaHistory.createOutputFiles()) {
 			System.out.println("All Version Files Created Successfully...");
@@ -65,11 +63,11 @@ public class JsonProcessing {
 			System.out.println("An error occurred while "
 					+ "creating version files...");
 		}
-		jsonOutputFile = new JsonOutputFile(schemaHistory);
-		jsonOutputFile.setPath(file);
-		if (jsonOutputFile.createOutputFiles()) {
-			System.out.println("All json output files created successfully...");
-		}
+//		jsonOutputFile = new JsonOutputFile(schemaHistory);
+//		jsonOutputFile.setPath(file);
+//		if (jsonOutputFile.createOutputFiles()) {
+//			System.out.println("All json output files created successfully...");
+//		}
 	}
 	
 	private boolean hasJsonObject(JsonParser parser) {

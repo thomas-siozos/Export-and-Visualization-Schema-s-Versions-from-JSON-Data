@@ -3,6 +3,7 @@ package schema;
 import java.io.File;
 import java.util.ArrayList;
 import data_processing.AtomicFieldChange;
+import output.JSOutputFile;
 import output.VersionFile;
 
 public class SchemaHistory {
@@ -12,17 +13,12 @@ public class SchemaHistory {
 	private final int ROOT_OBJECT_DEPTH = 0;
 	private final String ADDED_FIELD = "+";
 	private final String REMOVED_FIELD = "-";
-	private String file;
 	private VersionFile versionFile;
+	private JSOutputFile jsOutputFile;
 	
 	public SchemaHistory() {
 		schemaVersions = new ArrayList<Schema>();
 		changes = new ArrayList<ArrayList<AtomicFieldChange>>();
-		file = null;
-	}
-	
-	public void setFile(String file) {
-		this.file = file;
 	}
 
 	public void addSchema(Schema schema) {
@@ -66,14 +62,19 @@ public class SchemaHistory {
 	public boolean createOutputFiles() {
 		int count_versions = 0;
 		StringBuilder contents;
-		versionFile = new VersionFile(file);
+		StringBuilder contentsForJS;
+		versionFile = new VersionFile();
+		jsOutputFile = new JSOutputFile();
 		versionFile.createDirectory();
 		File directory = versionFile.getDirectory();
+		jsOutputFile.setDirectory(directory);
+		jsOutputFile.openWriter();
 		for (Schema version : schemaVersions) {
 			contents = new StringBuilder();
-			versionFile = new VersionFile(file);
+			contentsForJS = new StringBuilder();
 			versionFile.setDirectory(directory);
 			versionFile.setId(count_versions);
+			jsOutputFile.setId(count_versions);
 			contents.append("Version added at: " +
 					version.getId() + "\n");
 			if (count_versions >= 1) {
@@ -92,14 +93,21 @@ public class SchemaHistory {
 				}
 				contents.append("\n");
 			}
-			contents.append(version.printObject(ROOT_OBJECT_DEPTH));
+			contents.append(version.printObject(ROOT_OBJECT_DEPTH, true));
+			contentsForJS.append(version.printObject(ROOT_OBJECT_DEPTH, true));
 			if (!versionFile.createVersionFile(contents.toString())) {
+				System.out.println("File: version_"
+					+ Integer.toString(count_versions) + ", wasn't created...");
+				return false;
+			}
+			if (!jsOutputFile.createVersionFile(contentsForJS.toString())) {
 				System.out.println("File: version_"
 					+ Integer.toString(count_versions) + ", wasn't created...");
 				return false;
 			}
 			count_versions++;
 		}
+		jsOutputFile.closeWriter();
 		return true;
 	}
 }
