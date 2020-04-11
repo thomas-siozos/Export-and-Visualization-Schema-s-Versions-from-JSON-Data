@@ -9,8 +9,15 @@ function drawChart() {
     data.addColumn('string', 'Field');
     data.addColumn('string', 'Father');
     data.addRows([['root', '']]);
-    getVersion(window["data_" + i], data, "root");
+    setDataTable(window["data_" + i], data, "root");
     versions[i] = data;
+    var newDiv = document.createElement("div");
+    newDiv.style.height = "100px";
+    newDiv.style.textAlign = "center";
+    //newDiv.style.background = "red";
+    newDiv.innerHTML = "Version " + (i + 1);
+    newDiv.style.fontSize = "50px";
+    document.body.appendChild(newDiv);
     var newDiv = document.createElement("div");
     newDiv.setAttribute("id", "version_" + i);
     document.body.appendChild(newDiv);
@@ -36,10 +43,11 @@ function drawChart() {
   for (var i = 0; i <= data_counter; i++) {
     var chart = new google.visualization.OrgChart(document.getElementById("version_" + i));
     chart.draw(versions[i], {'allowHtml' : true})
+    //versios[i].setRowProperty(2, 'selectedStyle', 'background-color:#00FF00');
   }
 }
 
-function getVersion(version, data, father) {
+function setDataTable(version, data, father) {
   var name = null;
   for (var key in version) {
     if (version.hasOwnProperty(key)) {
@@ -47,7 +55,7 @@ function getVersion(version, data, father) {
       data.addRows([[name, father]]);
       if (version[key].constructor == objectConstructor) {
         var nested = version[key];
-        getVersion(nested, data, name);
+        setDataTable(nested, data, name);
       }
     }
   }
