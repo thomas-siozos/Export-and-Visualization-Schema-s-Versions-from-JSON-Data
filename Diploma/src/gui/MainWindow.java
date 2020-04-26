@@ -4,24 +4,21 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import org.apache.commons.io.FilenameUtils;
-
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-
 import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import data_processing.JsonProcessing;
 import saving_projects.ProjectSaving;
@@ -32,9 +29,9 @@ public class MainWindow extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	@SuppressWarnings("unused")
 	private JsonProcessing jsonProcessing;
 	private String file;
+	private ProjectSaving projectSaving;
 
 	/**
 	 * Launch the application.
@@ -166,8 +163,14 @@ public class MainWindow extends JFrame implements ActionListener {
 						    "File Extension Error",
 						    JOptionPane.WARNING_MESSAGE);
 	            } else {
+	            	JOptionPane pane = new JOptionPane("Processing your file...",
+	            			JOptionPane.PLAIN_MESSAGE);
+	            	JDialog dialog = pane.createDialog("Processing your file...");
+	            	dialog.setModal(false);
+	            	dialog.setVisible(true);
 		            jsonProcessing = new JsonProcessing();
 					jsonProcessing.processingJsonFile(file);
+					dialog.setVisible(false);
 	            }
 	        } else {
 	            System.out.println("Open file canceled by user...");
@@ -198,7 +201,7 @@ public class MainWindow extends JFrame implements ActionListener {
 			} else {
 				String projectName = JOptionPane.showInputDialog(this,
 						"Give a name for your project: ");
-				ProjectSaving projectSaving = new ProjectSaving();
+				projectSaving = new ProjectSaving();
 				if (projectSaving.createProject(projectName)) {
 					JOptionPane.showMessageDialog(this,
 							"Your project saved succesfully...");

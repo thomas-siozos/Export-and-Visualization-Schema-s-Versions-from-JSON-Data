@@ -13,8 +13,8 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import data_processing.AtomicFieldChange;
 import data_processing.ObjectNodeProcessing;
+import schema.AtomicFieldChange;
 import schema.Schema;
 import schema.SchemaDifference;
 import schema.SchemaHistory;

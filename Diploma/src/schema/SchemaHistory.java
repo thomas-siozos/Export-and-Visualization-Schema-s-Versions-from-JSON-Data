@@ -2,7 +2,7 @@ package schema;
 
 import java.io.File;
 import java.util.ArrayList;
-import data_processing.AtomicFieldChange;
+
 import output.JSOutputFile;
 import output.VersionFile;
 
