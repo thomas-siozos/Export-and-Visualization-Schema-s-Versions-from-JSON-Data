@@ -1,0 +1,25 @@
+Version added at: 8837
+
+Changes:
+root/collectible : BooleanNode	Added
+root/flavor : TextNode	Added
+root/rarity : TextNode	Added
+root/targetingArrowText : TextNode	Added
+root/elite : BooleanNode	Removed
+root/mechanics : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

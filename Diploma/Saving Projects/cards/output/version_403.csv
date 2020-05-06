@@ -1,0 +1,20 @@
+Version added at: 6978
+
+Changes:
+root/attack : IntNode	Added
+root/cost : IntNode	Added
+root/mechanics : ArrayNode	Added
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

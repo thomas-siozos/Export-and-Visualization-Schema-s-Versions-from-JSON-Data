@@ -1,0 +1,24 @@
+Version added at: 7413
+
+Changes:
+root/hideStats : BooleanNode	Added
+root/referencedTags : ArrayNode	Added
+root/faction : TextNode	Removed
+root/rarity : TextNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

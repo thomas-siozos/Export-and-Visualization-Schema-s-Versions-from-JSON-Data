@@ -1,0 +1,26 @@
+Version added at: 44
+
+Changes:
+root/mechanics : ArrayNode	Added
+root/targetingArrowText : TextNode	Added
+root/text : TextNode	Added
+root/race : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

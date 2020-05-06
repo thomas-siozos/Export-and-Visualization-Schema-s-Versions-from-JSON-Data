@@ -1,0 +1,27 @@
+Version added at: 5571
+
+Changes:
+root/collectible : BooleanNode	Added
+root/durability : IntNode	Added
+root/flavor : TextNode	Added
+root/hideStats : BooleanNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"elite" : "BooleanNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

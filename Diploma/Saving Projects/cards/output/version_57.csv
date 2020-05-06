@@ -1,0 +1,25 @@
+Version added at: 277
+
+Changes:
+root/elite : BooleanNode	Added
+root/mechanics : ArrayNode	Added
+root/referencedTags : ArrayNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

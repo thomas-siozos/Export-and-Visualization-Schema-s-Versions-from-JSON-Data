@@ -1,0 +1,23 @@
+Version added at: 8972
+
+Changes:
+root/techLevel : IntNode	Added
+root/elite : BooleanNode	Removed
+root/mechanics : ArrayNode	Removed
+root/race : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,25 @@
+Version added at: 8988
+
+Changes:
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/race : TextNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

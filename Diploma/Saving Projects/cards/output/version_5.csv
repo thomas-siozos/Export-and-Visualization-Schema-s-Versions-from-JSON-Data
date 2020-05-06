@@ -1,0 +1,20 @@
+Version added at: 6
+
+Changes:
+root/mechanics : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

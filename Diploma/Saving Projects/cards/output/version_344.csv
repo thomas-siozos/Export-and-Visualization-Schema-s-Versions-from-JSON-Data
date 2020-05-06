@@ -1,0 +1,19 @@
+Version added at: 5362
+
+Changes:
+root/referencedTags : ArrayNode	Added
+root/mechanics : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

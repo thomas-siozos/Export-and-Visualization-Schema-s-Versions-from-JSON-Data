@@ -1,0 +1,27 @@
+Version added at: 5502
+
+Changes:
+root/collectible : BooleanNode	Added
+root/elite : BooleanNode	Added
+root/flavor : TextNode	Added
+root/referencedTags : ArrayNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"elite" : "BooleanNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

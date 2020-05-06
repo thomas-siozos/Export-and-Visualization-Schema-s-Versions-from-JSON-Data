@@ -1,0 +1,16 @@
+Version added at: 2371
+
+Changes:
+root/cardClass : TextNode	Removed
+root/collectionText : TextNode	Removed
+root/cost : IntNode	Removed
+root/hideStats : BooleanNode	Removed
+root/text : TextNode	Removed
+
+{
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

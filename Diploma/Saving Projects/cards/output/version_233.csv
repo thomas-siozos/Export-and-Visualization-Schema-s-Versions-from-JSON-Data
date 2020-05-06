@@ -1,0 +1,21 @@
+Version added at: 2829
+
+Changes:
+root/collectionText : TextNode	Removed
+
+{
+	"armor" : "IntNode",
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

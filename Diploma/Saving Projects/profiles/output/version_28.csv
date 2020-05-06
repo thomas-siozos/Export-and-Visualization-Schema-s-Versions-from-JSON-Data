@@ -1,0 +1,27 @@
+Version added at: 92
+
+Changes:
+root/referencedTags : ArrayNode	Added
+root/targetingArrowText : TextNode	Added
+root/overload : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,21 @@
+Version added at: 85
+
+Changes:
+root/artist : TextNode	Removed
+root/attack : IntNode	Removed
+root/collectible : BooleanNode	Removed
+root/durability : IntNode	Removed
+root/flavor : TextNode	Removed
+root/mechanics : ArrayNode	Removed
+root/rarity : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

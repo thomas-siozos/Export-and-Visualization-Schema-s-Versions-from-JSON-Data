@@ -1,0 +1,21 @@
+Version added at: 2113
+
+Changes:
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

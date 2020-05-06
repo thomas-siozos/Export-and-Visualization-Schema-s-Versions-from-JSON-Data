@@ -1,0 +1,28 @@
+Version added at: 184
+
+Changes:
+root/elite : BooleanNode	Added
+root/targetingArrowText : TextNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

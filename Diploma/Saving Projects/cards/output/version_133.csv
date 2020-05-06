@@ -1,0 +1,22 @@
+Version added at: 1045
+
+Changes:
+root/artist : TextNode	Added
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/elite : BooleanNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

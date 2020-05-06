@@ -1,0 +1,30 @@
+Version added at: 715
+
+Changes:
+root/collectible : BooleanNode	Added
+root/flavor : TextNode	Added
+root/howToEarn : TextNode	Added
+root/howToEarnGolden : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/text : TextNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"howToEarn" : "TextNode",
+	"howToEarnGolden" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,23 @@
+Version added at: 2828
+
+Changes:
+root/collectible : BooleanNode	Removed
+root/flavor : TextNode	Removed
+
+{
+	"armor" : "IntNode",
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectionText" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

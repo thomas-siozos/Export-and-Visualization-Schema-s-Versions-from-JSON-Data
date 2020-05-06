@@ -1,0 +1,24 @@
+Version added at: 3523
+
+Changes:
+root/faction : TextNode	Added
+root/targetingArrowText : TextNode	Added
+root/elite : BooleanNode	Removed
+root/race : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"faction" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

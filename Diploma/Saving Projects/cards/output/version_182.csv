@@ -1,0 +1,23 @@
+Version added at: 1752
+
+Changes:
+root/artist : TextNode	Removed
+root/collectible : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/race : TextNode	Removed
+root/rarity : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"faction" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

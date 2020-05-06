@@ -1,0 +1,21 @@
+Version added at: 4974
+
+Changes:
+root/artist : TextNode	Added
+root/health : IntNode	Added
+root/rarity : TextNode	Added
+root/mechanics : ArrayNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

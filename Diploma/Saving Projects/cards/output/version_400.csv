@@ -1,0 +1,20 @@
+Version added at: 6878
+
+Changes:
+root/hideStats : BooleanNode	Added
+root/attack : IntNode	Removed
+root/cost : IntNode	Removed
+root/elite : BooleanNode	Removed
+root/health : IntNode	Removed
+root/mechanics : ArrayNode	Removed
+root/race : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

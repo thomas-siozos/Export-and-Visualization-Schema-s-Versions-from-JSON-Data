@@ -1,0 +1,27 @@
+Version added at: 3273
+
+Changes:
+root/durability : IntNode	Added
+root/overload : IntNode	Added
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"overload" : "IntNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

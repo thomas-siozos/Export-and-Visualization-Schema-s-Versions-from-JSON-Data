@@ -1,0 +1,28 @@
+Version added at: 1399
+
+Changes:
+root/collectible : BooleanNode	Added
+root/collectionText : TextNode	Added
+root/cost : IntNode	Added
+root/flavor : TextNode	Added
+root/rarity : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/text : TextNode	Added
+root/mechanics : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"collectionText" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

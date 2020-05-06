@@ -1,0 +1,25 @@
+Version added at: 8985
+
+Changes:
+root/flavor : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Added
+root/text : TextNode	Added
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,23 @@
+Version added at: 7557
+
+Changes:
+root/spellDamage : IntNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"spellDamage" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

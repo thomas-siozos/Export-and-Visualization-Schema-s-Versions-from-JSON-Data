@@ -1,0 +1,23 @@
+Version added at: 6537
+
+Changes:
+root/race : TextNode	Added
+
+{
+	"attack" : "IntNode",
+	"battlegroundsNormalDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

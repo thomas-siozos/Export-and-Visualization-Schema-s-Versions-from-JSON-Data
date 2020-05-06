@@ -1,0 +1,25 @@
+Version added at: 962
+
+Changes:
+root/artist : TextNode	Added
+root/race : TextNode	Added
+root/spellDamage : IntNode	Added
+root/elite : BooleanNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"set" : "TextNode",
+	"spellDamage" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,18 @@
+Version added at: 676
+
+Changes:
+root/health : IntNode	Added
+root/cost : IntNode	Removed
+root/hideStats : BooleanNode	Removed
+root/text : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

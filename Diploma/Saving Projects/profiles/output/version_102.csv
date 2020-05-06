@@ -1,0 +1,31 @@
+Version added at: 717
+
+Changes:
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/overload : IntNode	Added
+root/race : TextNode	Added
+root/referencedTags : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"howToEarn" : "TextNode",
+	"howToEarnGolden" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"overload" : "IntNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

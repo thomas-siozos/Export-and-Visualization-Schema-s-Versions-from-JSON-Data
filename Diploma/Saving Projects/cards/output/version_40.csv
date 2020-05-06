@@ -1,0 +1,19 @@
+Version added at: 206
+
+Changes:
+root/attack : IntNode	Added
+root/durability : IntNode	Added
+root/collectionText : TextNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

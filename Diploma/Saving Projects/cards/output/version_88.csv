@@ -1,0 +1,21 @@
+Version added at: 660
+
+Changes:
+root/puzzleType : IntNode	Added
+root/artist : TextNode	Removed
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"puzzleType" : "IntNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

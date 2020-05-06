@@ -1,0 +1,20 @@
+Version added at: 4082
+
+Changes:
+root/artist : TextNode	Removed
+root/collectionText : TextNode	Removed
+root/cost : IntNode	Removed
+root/hideStats : BooleanNode	Removed
+root/mechanics : ArrayNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

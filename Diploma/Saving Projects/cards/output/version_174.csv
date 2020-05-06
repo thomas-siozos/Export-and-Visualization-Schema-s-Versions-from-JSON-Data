@@ -1,0 +1,25 @@
+Version added at: 1717
+
+Changes:
+root/health : IntNode	Added
+root/artist : TextNode	Removed
+root/collectible : BooleanNode	Removed
+root/durability : IntNode	Removed
+root/flavor : TextNode	Removed
+root/howToEarn : TextNode	Removed
+root/howToEarnGolden : TextNode	Removed
+root/mechanics : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

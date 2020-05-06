@@ -1,0 +1,28 @@
+Version added at: 1748
+
+Changes:
+root/race : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/howToEarnGolden : TextNode	Removed
+root/mechanics : ArrayNode	Removed
+root/spellDamage : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"faction" : "TextNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

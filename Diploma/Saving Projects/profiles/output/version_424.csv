@@ -1,0 +1,21 @@
+Version added at: 7576
+
+Changes:
+root/attack : IntNode	Removed
+root/cardClass : TextNode	Removed
+root/cost : IntNode	Removed
+root/elite : BooleanNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+root/rarity : TextNode	Removed
+root/spellDamage : IntNode	Removed
+
+{
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

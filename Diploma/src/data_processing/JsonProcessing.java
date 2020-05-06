@@ -27,6 +27,7 @@ public class JsonProcessing {
 	public void processingJsonFile(String file) {
 		JsonFactory factory = new JsonFactory();
 		JsonParser parser = null;
+		boolean json_array = true;
 		try {
 			parser = factory.createParser(new File(file));
 		} catch (IOException e) {
@@ -38,23 +39,25 @@ public class JsonProcessing {
 		}
 		if (parser != null) {
 			while(hasJsonObject(parser)) {
-				parser.setCodec(new ObjectMapper());
-				JsonNode jsonNode = null;
-				try {
-					jsonNode = parser.readValueAsTree();
-				} catch (IOException e) {
-					System.out.println("IO Exception in JsonNode...");
-					e.printStackTrace();
+				json_array = false;
+				process(parser);
+			}
+			if (json_array == true) {
+				JsonToken token = null;
+				while(true) {
+					try {
+						token = parser.nextToken();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					if (!JsonToken.START_OBJECT.equals(token)) break;
+					if (token == null) break;
+					process(parser);
 				}
-				objectNodeProcessing = new ObjectNodeProcessing();
-				objectNodeProcessing.setObjectNode(jsonNode);
-				objectNodeProcessing.setId(id);
-				ObjectNode currentObject = objectNodeProcessing
-						.processObject("root");
-				versionComparison.compareVersions(schemaHistory, currentObject);
-				id++;
 			}
 		}
+		System.out.println("Total json objects : " + id);
 		schemaHistory.printVersionsNumber();
 		if (schemaHistory.createOutputFiles()) {
 			System.out.println("All Version Files Created Successfully...");
@@ -67,6 +70,24 @@ public class JsonProcessing {
 //		if (jsonOutputFile.createOutputFiles()) {
 //			System.out.println("All json output files created successfully...");
 //		}
+	}
+	
+	private void process(JsonParser parser) {
+		parser.setCodec(new ObjectMapper());
+		JsonNode jsonNode = null;
+		try {
+			jsonNode = parser.readValueAsTree();
+		} catch (IOException e) {
+			System.out.println("IO Exception in JsonNode...");
+			e.printStackTrace();
+		}
+		objectNodeProcessing = new ObjectNodeProcessing();
+		objectNodeProcessing.setObjectNode(jsonNode);
+		objectNodeProcessing.setId(id);
+		ObjectNode currentObject = objectNodeProcessing
+				.processObject("root");
+		versionComparison.compareVersions(schemaHistory, currentObject);
+		id++;
 	}
 	
 	private boolean hasJsonObject(JsonParser parser) {

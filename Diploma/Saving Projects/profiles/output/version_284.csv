@@ -1,0 +1,16 @@
+Version added at: 3650
+
+Changes:
+root/cardClass : TextNode	Removed
+root/faction : TextNode	Removed
+root/rarity : TextNode	Removed
+
+{
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

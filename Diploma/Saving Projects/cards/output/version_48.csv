@@ -1,0 +1,21 @@
+Version added at: 234
+
+Changes:
+root/rarity : TextNode	Added
+
+{
+	"attack" : "IntNode",
+	"battlegroundsPremiumDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,26 @@
+Version added at: 1865
+
+Changes:
+root/attack : IntNode	Added
+root/collectionText : TextNode	Added
+root/health : IntNode	Added
+root/hideStats : BooleanNode	Added
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectionText" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,22 @@
+Version added at: 237
+
+Changes:
+root/elite : BooleanNode	Removed
+root/rarity : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"battlegroundsPremiumDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

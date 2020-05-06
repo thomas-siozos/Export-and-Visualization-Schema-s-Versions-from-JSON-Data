@@ -1,0 +1,24 @@
+Version added at: 2743
+
+Changes:
+root/durability : IntNode	Added
+root/cardClass : TextNode	Removed
+root/collectible : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+root/rarity : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

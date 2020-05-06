@@ -1,0 +1,24 @@
+Version added at: 1378
+
+Changes:
+root/mechanics : ArrayNode	Added
+root/collectible : BooleanNode	Removed
+root/elite : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/race : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

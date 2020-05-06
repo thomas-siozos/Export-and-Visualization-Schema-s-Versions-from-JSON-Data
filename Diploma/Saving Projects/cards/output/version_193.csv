@@ -1,0 +1,22 @@
+Version added at: 1840
+
+Changes:
+root/rarity : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/text : TextNode	Added
+root/attack : IntNode	Removed
+root/durability : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

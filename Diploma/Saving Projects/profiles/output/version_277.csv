@@ -1,0 +1,20 @@
+Version added at: 3486
+
+Changes:
+root/cost : IntNode	Added
+root/hideStats : BooleanNode	Added
+root/text : TextNode	Added
+root/mechanics : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

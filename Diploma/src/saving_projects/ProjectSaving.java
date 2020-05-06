@@ -65,8 +65,7 @@ public class ProjectSaving {
 		File destFile = new File(destination);
 		try {
 			if (srcFile.isDirectory()) {
-				if (!destFile.exists()) 
-					FileUtils.copyDirectory(srcFile, destFile);
+				FileUtils.copyDirectory(srcFile, destFile);
 			} else {
 				FileUtils.copyFile(srcFile, destFile);
 			}
