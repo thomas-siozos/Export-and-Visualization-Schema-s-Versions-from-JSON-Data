@@ -4,8 +4,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
@@ -15,8 +13,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.Icon;
