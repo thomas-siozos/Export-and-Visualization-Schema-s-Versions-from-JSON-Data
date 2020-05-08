@@ -1,0 +1,90 @@
+Version added at: 4823
+
+Changes:
+root/homepage_url : TextNode	Added
+root/blog_url : TextNode	Added
+root/blog_feed_url : TextNode	Added
+root/twitter_username : TextNode	Added
+root/category_code : TextNode	Added
+root/founded_year : IntNode	Added
+root/tag_list : NullNode	Added
+root/alias_list : TextNode	Added
+root/email_address : TextNode	Added
+root/phone_number : TextNode	Added
+root/description : TextNode	Added
+root/image : ObjectNode	Added
+root/homepage_url : NullNode	Removed
+root/blog_url : NullNode	Removed
+root/blog_feed_url : NullNode	Removed
+root/twitter_username : NullNode	Removed
+root/category_code : NullNode	Removed
+root/founded_year : NullNode	Removed
+root/tag_list : TextNode	Removed
+root/alias_list : NullNode	Removed
+root/email_address : NullNode	Removed
+root/phone_number : NullNode	Removed
+root/description : NullNode	Removed
+root/image : NullNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "TextNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "NullNode",
+	"founded_year" : "IntNode",
+	"founded_month" : "NullNode",
+	"founded_day" : "NullNode",
+	"deadpooled_year" : "NullNode",
+	"deadpooled_month" : "NullNode",
+	"deadpooled_day" : "NullNode",
+	"deadpooled_url" : "NullNode",
+	"tag_list" : "NullNode",
+	"alias_list" : "TextNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "TextNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "TextNode",
+	"image" : {
+			"available_sizes" : "ArrayNode",
+			"attribution" : "NullNode",
+	},
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : {
+			"price_amount" : "NullNode",
+			"price_currency_code" : "TextNode",
+			"term_code" : "TextNode",
+			"source_url" : "TextNode",
+			"source_description" : "TextNode",
+			"acquired_year" : "IntNode",
+			"acquired_month" : "IntNode",
+			"acquired_day" : "IntNode",
+			"acquiring_company" : {
+					"name" : "TextNode",
+					"permalink" : "TextNode",
+			},
+	},
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

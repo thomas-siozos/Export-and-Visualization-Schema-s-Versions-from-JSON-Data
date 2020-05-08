@@ -1,0 +1,71 @@
+Version added at: 18176
+
+Changes:
+root/category_code : TextNode	Added
+root/image : NullNode	Added
+root/acquisition/price_amount : IntNode	Added
+root/acquisition/acquired_day : IntNode	Added
+root/acquisition/price_amount : NullNode	Removed
+root/acquisition/acquired_day : NullNode	Removed
+root/category_code : NullNode	Removed
+root/image : ObjectNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "TextNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "NullNode",
+	"founded_year" : "NullNode",
+	"founded_month" : "NullNode",
+	"founded_day" : "NullNode",
+	"deadpooled_year" : "NullNode",
+	"deadpooled_month" : "NullNode",
+	"deadpooled_day" : "NullNode",
+	"deadpooled_url" : "NullNode",
+	"tag_list" : "NullNode",
+	"alias_list" : "TextNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "TextNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "TextNode",
+	"image" : "NullNode",
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : {
+			"price_amount" : "IntNode",
+			"price_currency_code" : "TextNode",
+			"term_code" : "NullNode",
+			"source_url" : "TextNode",
+			"source_description" : "TextNode",
+			"acquired_year" : "IntNode",
+			"acquired_month" : "IntNode",
+			"acquired_day" : "IntNode",
+			"acquiring_company" : {
+					"name" : "TextNode",
+					"permalink" : "TextNode",
+			},
+	},
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

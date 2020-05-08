@@ -1,0 +1,68 @@
+Version added at: 13839
+
+Changes:
+root/acquisition : ObjectNode	Added
+root/acquisition : NullNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "NullNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "IntNode",
+	"founded_year" : "IntNode",
+	"founded_month" : "NullNode",
+	"founded_day" : "NullNode",
+	"deadpooled_year" : "IntNode",
+	"deadpooled_month" : "IntNode",
+	"deadpooled_day" : "IntNode",
+	"deadpooled_url" : "TextNode",
+	"tag_list" : "TextNode",
+	"alias_list" : "NullNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "TextNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "TextNode",
+	"image" : {
+			"available_sizes" : "ArrayNode",
+			"attribution" : "NullNode",
+	},
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : {
+			"price_amount" : "NullNode",
+			"price_currency_code" : "TextNode",
+			"term_code" : "NullNode",
+			"source_url" : "TextNode",
+			"source_description" : "TextNode",
+			"acquired_year" : "IntNode",
+			"acquired_month" : "IntNode",
+			"acquired_day" : "NullNode",
+			"acquiring_company" : {
+					"name" : "TextNode",
+					"permalink" : "TextNode",
+			},
+	},
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

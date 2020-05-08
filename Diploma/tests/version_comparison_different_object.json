@@ -7,7 +7,7 @@
 	"address" : {"road" : "abc",
 				"number" : 8 },
 	"married" : false,
-	"kids" : null
+	"kids" : 2.3
 }
 {
 	"name" : "Georgia",

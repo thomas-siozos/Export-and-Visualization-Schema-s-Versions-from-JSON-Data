@@ -65,11 +65,6 @@ public class JsonProcessing {
 			System.out.println("An error occurred while "
 					+ "creating version files...");
 		}
-//		jsonOutputFile = new JsonOutputFile(schemaHistory);
-//		jsonOutputFile.setPath(file);
-//		if (jsonOutputFile.createOutputFiles()) {
-//			System.out.println("All json output files created successfully...");
-//		}
 	}
 	
 	private void process(JsonParser parser) {

@@ -1,0 +1,80 @@
+Version added at: 1176
+
+Changes:
+root/twitter_username : TextNode	Added
+root/number_of_employees : IntNode	Added
+root/founded_year : NullNode	Added
+root/deadpooled_url : TextNode	Added
+root/tag_list : TextNode	Added
+root/acquisition/price_amount : IntNode	Added
+root/acquisition/term_code : TextNode	Added
+root/acquisition/price_amount : NullNode	Removed
+root/acquisition/term_code : NullNode	Removed
+root/twitter_username : NullNode	Removed
+root/number_of_employees : NullNode	Removed
+root/founded_year : IntNode	Removed
+root/deadpooled_url : NullNode	Removed
+root/tag_list : NullNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "TextNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "IntNode",
+	"founded_year" : "NullNode",
+	"founded_month" : "NullNode",
+	"founded_day" : "NullNode",
+	"deadpooled_year" : "NullNode",
+	"deadpooled_month" : "NullNode",
+	"deadpooled_day" : "NullNode",
+	"deadpooled_url" : "TextNode",
+	"tag_list" : "TextNode",
+	"alias_list" : "TextNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "TextNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "TextNode",
+	"image" : {
+			"available_sizes" : "ArrayNode",
+			"attribution" : "NullNode",
+	},
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : {
+			"price_amount" : "IntNode",
+			"price_currency_code" : "TextNode",
+			"term_code" : "TextNode",
+			"source_url" : "TextNode",
+			"source_description" : "TextNode",
+			"acquired_year" : "IntNode",
+			"acquired_month" : "IntNode",
+			"acquired_day" : "IntNode",
+			"acquiring_company" : {
+					"name" : "TextNode",
+					"permalink" : "TextNode",
+			},
+	},
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

@@ -1,0 +1,58 @@
+Version added at: 9019
+
+Changes:
+root/founded_day : NullNode	Added
+root/overview : NullNode	Added
+root/image : NullNode	Added
+root/acquisition : NullNode	Added
+root/founded_day : IntNode	Removed
+root/overview : TextNode	Removed
+root/image : ObjectNode	Removed
+root/acquisition : ObjectNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "TextNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "IntNode",
+	"founded_year" : "IntNode",
+	"founded_month" : "IntNode",
+	"founded_day" : "NullNode",
+	"deadpooled_year" : "NullNode",
+	"deadpooled_month" : "NullNode",
+	"deadpooled_day" : "NullNode",
+	"deadpooled_url" : "NullNode",
+	"tag_list" : "TextNode",
+	"alias_list" : "NullNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "NullNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "NullNode",
+	"image" : "NullNode",
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : "NullNode",
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

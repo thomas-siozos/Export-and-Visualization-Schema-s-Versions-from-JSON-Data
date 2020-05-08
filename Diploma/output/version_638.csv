@@ -1,0 +1,84 @@
+Version added at: 2792
+
+Changes:
+root/twitter_username : NullNode	Added
+root/category_code : TextNode	Added
+root/founded_year : IntNode	Added
+root/founded_month : IntNode	Added
+root/founded_day : IntNode	Added
+root/deadpooled_day : NullNode	Added
+root/alias_list : NullNode	Added
+root/description : NullNode	Added
+root/acquisition : ObjectNode	Added
+root/twitter_username : TextNode	Removed
+root/category_code : NullNode	Removed
+root/founded_year : NullNode	Removed
+root/founded_month : NullNode	Removed
+root/founded_day : NullNode	Removed
+root/deadpooled_day : IntNode	Removed
+root/alias_list : TextNode	Removed
+root/description : TextNode	Removed
+root/acquisition : NullNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"name" : "TextNode",
+	"permalink" : "TextNode",
+	"crunchbase_url" : "TextNode",
+	"homepage_url" : "TextNode",
+	"blog_url" : "TextNode",
+	"blog_feed_url" : "TextNode",
+	"twitter_username" : "NullNode",
+	"category_code" : "TextNode",
+	"number_of_employees" : "NullNode",
+	"founded_year" : "IntNode",
+	"founded_month" : "IntNode",
+	"founded_day" : "IntNode",
+	"deadpooled_year" : "IntNode",
+	"deadpooled_month" : "IntNode",
+	"deadpooled_day" : "NullNode",
+	"deadpooled_url" : "TextNode",
+	"tag_list" : "TextNode",
+	"alias_list" : "NullNode",
+	"email_address" : "TextNode",
+	"phone_number" : "TextNode",
+	"description" : "NullNode",
+	"created_at" : "TextNode",
+	"updated_at" : "TextNode",
+	"overview" : "TextNode",
+	"image" : {
+			"available_sizes" : "ArrayNode",
+			"attribution" : "NullNode",
+	},
+	"products" : "ArrayNode",
+	"relationships" : "ArrayNode",
+	"competitions" : "ArrayNode",
+	"providerships" : "ArrayNode",
+	"total_money_raised" : "TextNode",
+	"funding_rounds" : "ArrayNode",
+	"investments" : "ArrayNode",
+	"acquisition" : {
+			"price_amount" : "IntNode",
+			"price_currency_code" : "TextNode",
+			"term_code" : "TextNode",
+			"source_url" : "TextNode",
+			"source_description" : "TextNode",
+			"acquired_year" : "IntNode",
+			"acquired_month" : "IntNode",
+			"acquired_day" : "IntNode",
+			"acquiring_company" : {
+					"name" : "TextNode",
+					"permalink" : "TextNode",
+			},
+	},
+	"acquisitions" : "ArrayNode",
+	"offices" : "ArrayNode",
+	"milestones" : "ArrayNode",
+	"ipo" : "NullNode",
+	"video_embeds" : "ArrayNode",
+	"screenshots" : "ArrayNode",
+	"external_links" : "ArrayNode",
+	"partners" : "ArrayNode",
+};

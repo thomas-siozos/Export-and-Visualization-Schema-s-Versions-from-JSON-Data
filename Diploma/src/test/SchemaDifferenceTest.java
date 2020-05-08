@@ -86,7 +86,7 @@ class SchemaDifferenceTest {
 				assertEquals("IntNode", atomic.getValue());
 				assertEquals("+", atomic.getAct());
 			} else if (count == 1) {
-				assertEquals("NullNode", atomic.getValue());
+				assertEquals("DoubleNode", atomic.getValue());
 				assertEquals("-", atomic.getAct());
 			}
 			count++;
