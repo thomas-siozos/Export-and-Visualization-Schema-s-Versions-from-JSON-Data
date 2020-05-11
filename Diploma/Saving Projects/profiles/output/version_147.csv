@@ -1,0 +1,33 @@
+Version added at: 1250
+
+Changes:
+root/classes : ArrayNode	Added
+root/collectible : BooleanNode	Added
+root/flavor : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/multiClassGroup : TextNode	Added
+root/rarity : TextNode	Added
+root/text : TextNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/race : TextNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"classes" : "ArrayNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"multiClassGroup" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

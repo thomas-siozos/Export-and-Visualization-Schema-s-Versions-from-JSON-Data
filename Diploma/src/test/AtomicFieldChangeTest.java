@@ -1,7 +1,6 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.After;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,21 +8,16 @@ import org.junit.jupiter.api.Test;
 import schema.AtomicFieldChange;
 
 class AtomicFieldChangeTest {
-	
+
 	private AtomicFieldChange field;
-	
+
 	@BeforeAll
 	public static void setUp() {
 		System.out.println("Testing AtomicFieldChange class...\n");
 	}
-	
+
 	@BeforeEach
 	public void init() {
-		field = new AtomicFieldChange();
-	}
-	
-	@After
-	public void tearDown() {
 		field = new AtomicFieldChange();
 	}
 
@@ -39,7 +33,7 @@ class AtomicFieldChangeTest {
 				"\nParent : " +field.getParent() + "\n" +
 				field.getAct() + " : Added\n");
 	}
-	
+
 	@Test
 	void testRemovedChange() {
 		field.setKey("email");

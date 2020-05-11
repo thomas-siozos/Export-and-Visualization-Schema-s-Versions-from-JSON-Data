@@ -1,0 +1,18 @@
+Version added at: 2127
+
+Changes:
+root/artist : TextNode	Added
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

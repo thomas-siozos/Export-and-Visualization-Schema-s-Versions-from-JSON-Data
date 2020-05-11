@@ -1,0 +1,26 @@
+Version added at: 1932
+
+Changes:
+root/referencedTags : ArrayNode	Added
+root/attack : IntNode	Removed
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/collectible : BooleanNode	Removed
+root/elite : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/health : IntNode	Removed
+root/rarity : TextNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

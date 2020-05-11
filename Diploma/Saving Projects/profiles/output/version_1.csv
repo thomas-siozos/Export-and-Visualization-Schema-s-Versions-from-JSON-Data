@@ -1,0 +1,44 @@
+Version added at: 2
+
+Changes:
+root/nreturned : IntNode	Added
+root/nscanned : IntNode	Added
+root/ntoskip : IntNode	Added
+root/query : ObjectNode	Added
+root/command : ObjectNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"client" : "TextNode",
+	"keyUpdates" : "IntNode",
+	"lockStats" : {
+			"timeAcquiringMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+			"timeLockedMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+	},
+	"millis" : "IntNode",
+	"nreturned" : "IntNode",
+	"ns" : "TextNode",
+	"nscanned" : "IntNode",
+	"ntoreturn" : "IntNode",
+	"ntoskip" : "IntNode",
+	"numYield" : "IntNode",
+	"op" : "TextNode",
+	"query" : {
+			"expireAfterSeconds" : {
+					"$exists" : "BooleanNode",
+			},
+	},
+	"responseLength" : "IntNode",
+	"ts" : {
+			"$date" : "TextNode",
+	},
+	"user" : "TextNode",
+};

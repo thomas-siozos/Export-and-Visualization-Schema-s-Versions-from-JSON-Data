@@ -1,0 +1,30 @@
+Version added at: 84
+
+Changes:
+root/artist : TextNode	Added
+root/attack : IntNode	Added
+root/collectible : BooleanNode	Added
+root/cost : IntNode	Added
+root/durability : IntNode	Added
+root/flavor : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Added
+root/text : TextNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

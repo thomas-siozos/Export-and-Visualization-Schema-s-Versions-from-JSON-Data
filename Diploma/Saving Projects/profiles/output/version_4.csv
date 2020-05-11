@@ -1,0 +1,43 @@
+Version added at: 252
+
+Changes:
+root/lockStats/timeAcquiringMicros/r : IntNode	Added
+root/lockStats/timeAcquiringMicros/r : DoubleNode	Removed
+root/lockStats/timeLockedMicros/r : IntNode	Added
+root/lockStats/timeLockedMicros/r : DoubleNode	Removed
+root/nscanned : IntNode	Added
+root/query/student_id : IntNode	Removed
+root/nscanned : DoubleNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"client" : "TextNode",
+	"keyUpdates" : "IntNode",
+	"lockStats" : {
+			"timeAcquiringMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+			"timeLockedMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+	},
+	"millis" : "IntNode",
+	"nreturned" : "IntNode",
+	"ns" : "TextNode",
+	"nscanned" : "IntNode",
+	"ntoreturn" : "IntNode",
+	"ntoskip" : "IntNode",
+	"numYield" : "IntNode",
+	"op" : "TextNode",
+	"query" : {
+	},
+	"responseLength" : "IntNode",
+	"ts" : {
+			"$date" : "TextNode",
+	},
+	"user" : "TextNode",
+};

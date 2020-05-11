@@ -1,0 +1,39 @@
+Version added at: 1321
+
+Changes:
+root/query/class_id : IntNode	Added
+root/query/student_id : IntNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"client" : "TextNode",
+	"keyUpdates" : "IntNode",
+	"lockStats" : {
+			"timeAcquiringMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+			"timeLockedMicros" : {
+					"r" : "IntNode",
+					"w" : "IntNode",
+			},
+	},
+	"millis" : "IntNode",
+	"nreturned" : "IntNode",
+	"ns" : "TextNode",
+	"nscanned" : "IntNode",
+	"ntoreturn" : "IntNode",
+	"ntoskip" : "IntNode",
+	"numYield" : "IntNode",
+	"op" : "TextNode",
+	"query" : {
+			"class_id" : "IntNode",
+	},
+	"responseLength" : "IntNode",
+	"ts" : {
+			"$date" : "TextNode",
+	},
+	"user" : "TextNode",
+};

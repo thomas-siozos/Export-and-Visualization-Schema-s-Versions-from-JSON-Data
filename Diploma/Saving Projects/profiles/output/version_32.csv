@@ -1,0 +1,26 @@
+Version added at: 148
+
+Changes:
+root/health : IntNode	Added
+root/spellDamage : IntNode	Added
+root/durability : IntNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"spellDamage" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

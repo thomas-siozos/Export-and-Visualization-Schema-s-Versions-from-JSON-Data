@@ -57,7 +57,7 @@ public class JsonProcessing {
 				}
 			}
 		}
-		System.out.println("Total json objects : " + id);
+		System.out.println("Total json objects : " + (id - 1));
 		schemaHistory.printVersionsNumber();
 		if (schemaHistory.createOutputFiles()) {
 			System.out.println("All Version Files Created Successfully...");

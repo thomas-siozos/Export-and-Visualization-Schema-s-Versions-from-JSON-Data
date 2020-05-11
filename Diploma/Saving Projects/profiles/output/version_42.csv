@@ -1,0 +1,18 @@
+Version added at: 219
+
+Changes:
+root/rarity : TextNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

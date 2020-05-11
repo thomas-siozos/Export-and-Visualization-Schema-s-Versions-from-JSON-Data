@@ -1,0 +1,21 @@
+Version added at: 7760
+
+Changes:
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/mechanics : ArrayNode	Removed
+root/race : TextNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

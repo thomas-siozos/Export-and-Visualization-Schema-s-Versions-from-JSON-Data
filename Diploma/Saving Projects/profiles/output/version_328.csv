@@ -1,0 +1,25 @@
+Version added at: 4853
+
+Changes:
+root/durability : IntNode	Added
+root/health : IntNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"flavor" : "TextNode",
+	"howToEarn" : "TextNode",
+	"howToEarnGolden" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

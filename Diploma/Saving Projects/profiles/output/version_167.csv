@@ -1,0 +1,19 @@
+Version added at: 1634
+
+Changes:
+root/cost : IntNode	Added
+root/targetingArrowText : TextNode	Added
+root/mechanics : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

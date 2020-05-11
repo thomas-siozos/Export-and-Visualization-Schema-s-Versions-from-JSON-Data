@@ -1,0 +1,22 @@
+Version added at: 885
+
+Changes:
+root/race : TextNode	Added
+root/spellDamage : IntNode	Added
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"set" : "TextNode",
+	"spellDamage" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

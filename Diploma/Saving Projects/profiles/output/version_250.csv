@@ -1,0 +1,40 @@
+Version added at: 3079
+
+Changes:
+root/artist : TextNode	Added
+root/attack : IntNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Added
+root/collectible : BooleanNode	Added
+root/flavor : TextNode	Added
+root/howToEarn : TextNode	Added
+root/howToEarnGolden : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/targetingArrowText : TextNode	Added
+root/techLevel : IntNode	Added
+root/text : TextNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"battlegroundsPremiumDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"howToEarn" : "TextNode",
+	"howToEarnGolden" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

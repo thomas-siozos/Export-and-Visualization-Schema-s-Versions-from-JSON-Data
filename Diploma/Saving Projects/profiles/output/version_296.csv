@@ -1,0 +1,28 @@
+Version added at: 3852
+
+Changes:
+root/armor : IntNode	Added
+root/collectible : BooleanNode	Added
+root/elite : BooleanNode	Added
+root/flavor : TextNode	Added
+root/attack : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"armor" : "IntNode",
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

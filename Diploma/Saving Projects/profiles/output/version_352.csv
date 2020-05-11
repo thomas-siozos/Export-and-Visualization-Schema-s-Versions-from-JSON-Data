@@ -1,0 +1,20 @@
+Version added at: 5638
+
+Changes:
+root/durability : IntNode	Added
+root/hideStats : BooleanNode	Removed
+root/mechanics : ArrayNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

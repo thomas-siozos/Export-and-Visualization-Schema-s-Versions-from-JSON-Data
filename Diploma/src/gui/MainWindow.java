@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
@@ -152,6 +154,12 @@ public class MainWindow extends JFrame implements ActionListener {
 		int returnVal;
 		switch (choice) {
 		case "Upload File":
+			try {
+				FileUtils.deleteDirectory(new File("output"));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			returnVal = fc.showOpenDialog(this);
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 	            File selectedFile = fc.getSelectedFile();

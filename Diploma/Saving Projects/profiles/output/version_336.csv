@@ -1,0 +1,23 @@
+Version added at: 5021
+
+Changes:
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"hideStats" : "BooleanNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,21 @@
+Version added at: 3481
+
+Changes:
+root/mechanics : ArrayNode	Added
+root/rarity : TextNode	Added
+root/attack : IntNode	Removed
+root/cost : IntNode	Removed
+root/elite : BooleanNode	Removed
+root/health : IntNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

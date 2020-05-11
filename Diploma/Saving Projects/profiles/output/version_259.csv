@@ -1,0 +1,31 @@
+Version added at: 3160
+
+Changes:
+root/faction : TextNode	Added
+root/targetingArrowText : TextNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Removed
+root/howToEarn : TextNode	Removed
+root/howToEarnGolden : TextNode	Removed
+root/race : TextNode	Removed
+root/techLevel : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"faction" : "TextNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

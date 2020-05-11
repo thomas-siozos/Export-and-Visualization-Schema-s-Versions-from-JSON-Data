@@ -1,6 +1,0 @@
-1. Log File.
-2. Benchmark.
-3. Tests.
-4. Javascript.
-5. GUI.
-6. Text.

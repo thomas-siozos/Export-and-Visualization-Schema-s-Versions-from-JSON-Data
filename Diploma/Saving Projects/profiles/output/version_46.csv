@@ -1,0 +1,26 @@
+Version added at: 231
+
+Changes:
+root/battlegroundsPremiumDbfId : IntNode	Added
+root/health : IntNode	Added
+root/race : TextNode	Added
+root/techLevel : IntNode	Added
+root/durability : IntNode	Removed
+
+{
+	"attack" : "IntNode",
+	"battlegroundsPremiumDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};
