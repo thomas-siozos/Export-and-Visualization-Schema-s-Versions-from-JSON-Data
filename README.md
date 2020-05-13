@@ -1,2 +1,2 @@
 # Diploma
-© 2020 Siozos Thomas All Rights Reserved
+© November 2019 Siozos Thomas All Rights Reserved
