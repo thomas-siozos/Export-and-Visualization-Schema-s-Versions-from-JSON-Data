@@ -1,0 +1,17 @@
+Version added at: 7225
+
+Changes:
+root/rarity : TextNode	Added
+root/classes : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

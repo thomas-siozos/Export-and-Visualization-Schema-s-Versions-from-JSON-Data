@@ -1,0 +1,22 @@
+Version added at: 8263
+
+Changes:
+root/collectionText : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/attack : IntNode	Removed
+root/durability : IntNode	Removed
+root/mechanics : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"collectionText" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

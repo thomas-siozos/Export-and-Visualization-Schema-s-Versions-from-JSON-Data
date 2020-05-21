@@ -1,0 +1,21 @@
+Version added at: 836
+
+Changes:
+root/durability : IntNode	Added
+root/text : TextNode	Added
+root/elite : BooleanNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

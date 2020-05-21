@@ -1,0 +1,23 @@
+Version added at: 2923
+
+Changes:
+root/collectionText : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/targetingArrowText : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"collectionText" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

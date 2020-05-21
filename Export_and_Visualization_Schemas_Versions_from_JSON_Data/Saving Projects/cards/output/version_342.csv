@@ -1,0 +1,26 @@
+Version added at: 5335
+
+Changes:
+root/faction : TextNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/howToEarn : TextNode	Removed
+root/howToEarnGolden : TextNode	Removed
+root/mechanics : ArrayNode	Removed
+root/spellDamage : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"faction" : "TextNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

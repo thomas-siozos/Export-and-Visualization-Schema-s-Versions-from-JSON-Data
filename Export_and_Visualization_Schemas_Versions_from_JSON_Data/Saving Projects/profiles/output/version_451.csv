@@ -1,0 +1,30 @@
+Version added at: 8935
+
+Changes:
+root/collectible : BooleanNode	Added
+root/flavor : TextNode	Added
+root/questReward : TextNode	Added
+root/rarity : TextNode	Added
+root/referencedTags : ArrayNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/hideStats : BooleanNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"questReward" : "TextNode",
+	"rarity" : "TextNode",
+	"referencedTags" : "ArrayNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

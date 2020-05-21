@@ -1,0 +1,19 @@
+Version added at: 4200
+
+Changes:
+root/artist : TextNode	Added
+root/mechanics : ArrayNode	Added
+root/attack : IntNode	Removed
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,29 @@
+Version added at: 3477
+
+Changes:
+root/elite : BooleanNode	Added
+root/techLevel : IntNode	Added
+root/artist : TextNode	Removed
+root/collectible : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/howToEarn : TextNode	Removed
+root/howToEarnGolden : TextNode	Removed
+root/mechanics : ArrayNode	Removed
+root/rarity : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/targetingArrowText : TextNode	Removed
+root/text : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"type" : "TextNode",
+};

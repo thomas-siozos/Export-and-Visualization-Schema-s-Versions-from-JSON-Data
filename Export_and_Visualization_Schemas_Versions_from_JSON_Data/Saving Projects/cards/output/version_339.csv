@@ -1,0 +1,16 @@
+Version added at: 5057
+
+Changes:
+root/artist : TextNode	Added
+
+{
+	"artist" : "TextNode",
+	"cardClass" : "TextNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

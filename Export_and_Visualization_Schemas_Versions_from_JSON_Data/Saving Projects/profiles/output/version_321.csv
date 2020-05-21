@@ -1,0 +1,24 @@
+Version added at: 4707
+
+Changes:
+root/durability : IntNode	Added
+root/elite : BooleanNode	Added
+root/collectionText : TextNode	Removed
+root/health : IntNode	Removed
+root/race : TextNode	Removed
+root/rarity : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"durability" : "IntNode",
+	"elite" : "BooleanNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

@@ -1,0 +1,19 @@
+Version added at: 7032
+
+Changes:
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/mechanics : ArrayNode	Removed
+root/referencedTags : ArrayNode	Removed
+root/text : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"hideCost" : "BooleanNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"type" : "TextNode",
+};

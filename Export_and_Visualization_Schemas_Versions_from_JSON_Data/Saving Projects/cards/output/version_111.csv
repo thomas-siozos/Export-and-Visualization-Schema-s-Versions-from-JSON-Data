@@ -1,0 +1,20 @@
+Version added at: 776
+
+Changes:
+root/overload : IntNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"overload" : "IntNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

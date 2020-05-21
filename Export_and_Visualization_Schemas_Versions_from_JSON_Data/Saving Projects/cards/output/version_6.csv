@@ -1,0 +1,27 @@
+Version added at: 7
+
+Changes:
+root/attack : IntNode	Added
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/race : TextNode	Added
+root/artist : TextNode	Removed
+root/collectible : BooleanNode	Removed
+root/flavor : TextNode	Removed
+root/rarity : TextNode	Removed
+root/referencedTags : ArrayNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

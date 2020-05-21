@@ -1,0 +1,21 @@
+Version added at: 2773
+
+Changes:
+root/cardClass : TextNode	Added
+root/elite : BooleanNode	Added
+root/text : TextNode	Added
+root/artist : TextNode	Removed
+root/attack : IntNode	Removed
+root/durability : IntNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"elite" : "BooleanNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

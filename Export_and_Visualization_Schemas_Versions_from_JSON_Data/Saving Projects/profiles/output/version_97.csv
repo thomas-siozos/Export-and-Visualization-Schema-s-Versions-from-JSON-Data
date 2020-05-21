@@ -1,0 +1,31 @@
+Version added at: 705
+
+Changes:
+root/attack : IntNode	Added
+root/battlegroundsPremiumDbfId : IntNode	Added
+root/health : IntNode	Added
+root/race : TextNode	Added
+root/techLevel : IntNode	Added
+
+{
+	"artist" : "TextNode",
+	"attack" : "IntNode",
+	"battlegroundsPremiumDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"collectible" : "BooleanNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"health" : "IntNode",
+	"howToEarn" : "TextNode",
+	"howToEarnGolden" : "TextNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

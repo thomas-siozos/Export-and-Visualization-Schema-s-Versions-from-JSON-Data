@@ -1,0 +1,22 @@
+Version added at: 872
+
+Changes:
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/targetingArrowText : TextNode	Added
+root/durability : IntNode	Removed
+
+{
+	"attack" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"targetingArrowText" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

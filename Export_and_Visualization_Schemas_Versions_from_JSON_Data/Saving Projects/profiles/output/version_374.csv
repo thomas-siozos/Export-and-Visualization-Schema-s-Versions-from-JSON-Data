@@ -1,0 +1,20 @@
+Version added at: 6497
+
+Changes:
+root/cost : IntNode	Added
+root/faction : TextNode	Added
+root/text : TextNode	Added
+root/health : IntNode	Removed
+root/hideStats : BooleanNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"faction" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

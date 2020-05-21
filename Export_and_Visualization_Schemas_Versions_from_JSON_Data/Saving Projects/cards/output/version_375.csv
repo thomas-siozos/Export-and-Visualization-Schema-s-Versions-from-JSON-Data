@@ -1,0 +1,29 @@
+Version added at: 6503
+
+Changes:
+root/attack : IntNode	Added
+root/battlegroundsNormalDbfId : IntNode	Added
+root/health : IntNode	Added
+root/mechanics : ArrayNode	Added
+root/race : TextNode	Added
+root/rarity : TextNode	Added
+root/techLevel : IntNode	Added
+root/faction : TextNode	Removed
+
+{
+	"attack" : "IntNode",
+	"battlegroundsNormalDbfId" : "IntNode",
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"health" : "IntNode",
+	"id" : "TextNode",
+	"mechanics" : "ArrayNode",
+	"name" : "TextNode",
+	"race" : "TextNode",
+	"rarity" : "TextNode",
+	"set" : "TextNode",
+	"techLevel" : "IntNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};

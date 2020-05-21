@@ -1,0 +1,19 @@
+Version added at: 3789
+
+Changes:
+root/flavor : TextNode	Added
+root/attack : IntNode	Removed
+root/health : IntNode	Removed
+root/rarity : TextNode	Removed
+
+{
+	"cardClass" : "TextNode",
+	"cost" : "IntNode",
+	"dbfId" : "IntNode",
+	"flavor" : "TextNode",
+	"id" : "TextNode",
+	"name" : "TextNode",
+	"set" : "TextNode",
+	"text" : "TextNode",
+	"type" : "TextNode",
+};
