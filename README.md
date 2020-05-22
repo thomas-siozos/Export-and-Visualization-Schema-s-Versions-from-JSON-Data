@@ -18,11 +18,11 @@
 ## Libraries
 
 <ul>
-<li>![Jackson](https://github.com/FasterXML/jackson)</li>
-<li>[Gson](https://github.com/google/gson)</li>
-<li>[JSON-P](https://javaee.github.io/jsonp/)</li>
-<li>[Json-simple](https://code.google.com/archive/p/json-simple/)</li>
-<li>[mJson](https://bolerio.github.io/mjson/)</li>
+<li> [Jackson](https://github.com/FasterXML/jackson)</li>
+<li> [Gson](https://github.com/google/gson)</li>
+<li> [JSON-P](https://javaee.github.io/jsonp/)</li>
+<li> [Json-simple](https://code.google.com/archive/p/json-simple/)</li>
+<li> [mJson](https://bolerio.github.io/mjson/)</li>
 </ul>
 
 ### Run
