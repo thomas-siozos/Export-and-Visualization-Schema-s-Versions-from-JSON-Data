@@ -17,11 +17,11 @@
 
 ## Libraries
 
--[Jackson](https://github.com/FasterXML/jackson)
--[Gson](https://github.com/google/gson)
--[JSON-P](https://javaee.github.io/jsonp/)
--[Json-simple](https://code.google.com/archive/p/json-simple/)
--[mJson](https://bolerio.github.io/mjson/)
+* [Jackson](https://github.com/FasterXML/jackson)
+* [Gson](https://github.com/google/gson)
+* [JSON-P](https://javaee.github.io/jsonp/)
+* [Json-simple](https://code.google.com/archive/p/json-simple/)
+* [mJson](https://bolerio.github.io/mjson/)
 
 ### Run
 <b>mvn install</b>
