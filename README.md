@@ -61,12 +61,12 @@ browser.
 
 * [Eclipse](https://www.eclipse.org/)
 * [Atom](https://atom.io/)
+* [Maven](https://maven.apache.org/)
+* **Java Microbenchmark Harness**
 * **Java**
 * **HTML**
 * **JavaScript**
 * **Google Charts**
-* **Java Microbenchmark Harness**
-* [Maven](https://maven.apache.org/)
 * **Jackson**
 * **Swing**
 * **JUnit5**
@@ -75,7 +75,7 @@ browser.
 
 <b>v1.0.0</b>
 
-## Authors
+## Authors :page_with_curl:
 
 <b>Siozos Thomas</b>
 
