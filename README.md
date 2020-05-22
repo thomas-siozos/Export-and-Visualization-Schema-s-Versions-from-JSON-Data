@@ -59,19 +59,17 @@ browser.
 
 ## Build With
 
-<ul>
-<li>[Eclipse](https://www.eclipse.org/)</li>
-<li>[Atom](https://atom.io/)</li>
-<li><b>Java</b></li>
-<li><b>HTML</b></li>
-<li><b>JavaScript</b></li>
-<li><b>Google Charts</b></li>
-<li><b>Java Microbenchmark Harness</b></li>
-<li>[Maven](https://maven.apache.org/)</li>
-<li><b>Jackson</b></li>
-<li><b>Swing</b></li>
-<li><b>JUnit5</b></li>
-</ul>
+* [Eclipse](https://www.eclipse.org/)
+* [Atom](https://atom.io/)
+* **Java**
+* **HTML**
+* **JavaScript**
+* **Google Charts**
+* **Java Microbenchmark Harness**
+* [Maven](https://maven.apache.org/)
+* **Jackson**
+* **Swing**
+* **JUnit5**
 
 ## Versioning
 
