@@ -29,11 +29,11 @@
 
 ### Results
 
-<div aligh="center"<b>Small Files Table</b>
+<div aligh="center"<b>Small Files Table</b></div>
 
 ![Small Files](/benchmark/small_files_table.png)
 
-<div aligh="center"<b>Big Files Table</b>
+<div aligh="center"<b>Big Files Table</b></div>
 
 ![Big Files](/benchmark/big_files_table.png)
 
@@ -75,9 +75,9 @@ browser.
 
 <b>v1.0.0</b>
 
-## Authors :page_with_curl:
+## Authors
 
-<b>Siozos Thomas</b>
+:pencil2: <b>Siozos Thomas</b>
 
 ## Copyright
 
