@@ -24,7 +24,7 @@
 * [mJson](https://bolerio.github.io/mjson/)
 
 ### Run
-<b>mvn install</b>
+<b>mvn install</b><br/>
 <b>java -jar target/benchmarks.jar</b>
 
 ### Results
