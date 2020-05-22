@@ -1,4 +1,4 @@
-# Diploma
+# Export and Visualization Schema's Versions from JSON Data
 
 Στόχος του project είναι να εξάγει και να οπτικοποιήσει εκδόσεις του σχήματος
 δεδομένων τύπου [JSON](https://www.json.org/json-en.html). Η επεξεργασία των
@@ -29,11 +29,11 @@
 
 ### Results
 
-<div aligh="center"<b>Small Files Table</b></div>
+<div align="center"><b>Small Files Table</b></div>
 
 ![Small Files](/benchmark/small_files_table.png)
 
-<div aligh="center"<b>Big Files Table</b></div>
+<div align="center"><b>Big Files Table</b></div>
 
 ![Big Files](/benchmark/big_files_table.png)
 
