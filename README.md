@@ -31,11 +31,11 @@
 
 <div align="center"><b>Small Files Table</b></div>
 
-<div style="text-align:center"><img src="/benchmark/small_files_table.png"/></div>
+<div align="center"><img src="/benchmark/small_files_table.png"/></div>
 
 <div align="center"><b>Big Files Table</b></div>
 
-<div style="text-align:center"><img src="/benchmark/big_files_table.png"/></div>
+<div align="center"><img src="/benchmark/big_files_table.png"/></div>
 
 Οπότε όπως παρατηρούμε η Jackson είναι αρκετά γρήγορη και στις δύο περιπτώσεις.
 
