@@ -10,6 +10,16 @@
 ## Table of Contents
 
 * [Benchamrk](#Benchamrk)
+  * [Libraries](#Libraries)
+  * [Run](#Run)
+  * [Results](#Results)
+* [Running the tests](#Running-the-tests)
+* [Visualization](#Visualization)
+* [Output Files](#Output-Files)
+* [Build With](#Build-With)
+* [Versioning](#Versioning)
+* [Authors](#Authors)
+* [Copyright](#Copyright)
 
 
 ## Benchamrk
@@ -19,7 +29,7 @@
 με μεγαλύτερο μέγεθος. Έτσι, έγινε η σύγκριση μεταξύ των βιβλιοθηκών της Java για
 το ποια είναι πιο γρήγορη στο να διαβάζει αρχεία.
 
-## Libraries
+### Libraries
 
 * [Jackson](https://github.com/FasterXML/jackson)
 * [Gson](https://github.com/google/gson)
