@@ -18,7 +18,7 @@
 ## Libraries
 
 <ul>
-<li>amp;[Jackson](https://github.com/FasterXML/jackson)</li>
+<li>&nbsp;[Jackson](https://github.com/FasterXML/jackson)</li>
 <li>[Gson](https://github.com/google/gson)</li>
 <li>[JSON-P](https://javaee.github.io/jsonp/)</li>
 <li>[Json-simple](https://code.google.com/archive/p/json-simple/)</li>
