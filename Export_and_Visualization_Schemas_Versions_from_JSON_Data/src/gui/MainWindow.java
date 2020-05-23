@@ -127,7 +127,7 @@ public class MainWindow extends JFrame implements ActionListener {
 		contentPane.add(btnUploadProject);
 		try {
 			btnUploadProject.setBorder(new EmptyBorder(0, 0, 0, 0));
-    		Icon icon = new ImageIcon("images/upload_project.png");
+    		Icon icon = new ImageIcon("images/load_project.png");
     		btnUploadProject.setIcon(icon);
   		} catch (Exception e) {
   			System.out.println(e);
