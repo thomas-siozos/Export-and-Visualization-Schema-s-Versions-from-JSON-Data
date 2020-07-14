@@ -69,7 +69,7 @@ browser.
 
 ### Example of Visualization
 **Input file: cards.json**<br/>
-[example](https://github.com/SiozosThomas/Export-and-Visualization-Schema-s-Versions-from-JSON-Data/blob/master/Export_and_Visualization_Schemas_Versions_from_JSON_Data/images/cards_visual_example.png)
+![example](https://github.com/SiozosThomas/Export-and-Visualization-Schema-s-Versions-from-JSON-Data/blob/master/Export_and_Visualization_Schemas_Versions_from_JSON_Data/images/cards_visual_example.png)
 
 ## Output Files
 
