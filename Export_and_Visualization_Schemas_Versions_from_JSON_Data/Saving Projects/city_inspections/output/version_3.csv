@@ -1,0 +1,25 @@
+Version added at: 55
+
+Changes:
+root/address/zip : IntNode	Added
+root/address/number : TextNode	Added
+root/address/zip : TextNode	Removed
+root/address/number : IntNode	Removed
+
+{
+	"_id" : {
+			"$oid" : "TextNode",
+	},
+	"id" : "TextNode",
+	"certificate_number" : "IntNode",
+	"business_name" : "TextNode",
+	"date" : "TextNode",
+	"result" : "TextNode",
+	"sector" : "TextNode",
+	"address" : {
+			"city" : "TextNode",
+			"zip" : "IntNode",
+			"street" : "TextNode",
+			"number" : "TextNode",
+	},
+};
