@@ -1,9 +1,6 @@
 package data_processing;
 
 import javafx.util.Pair;
-import schema.Schema;
-import schema.SchemaDifference;
-import schema.SchemaHistory;
 
 public class VersionComparison {
 	

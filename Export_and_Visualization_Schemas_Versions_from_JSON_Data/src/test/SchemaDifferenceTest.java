@@ -13,11 +13,11 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import data_processing.AtomicFieldChange;
 import data_processing.ObjectNodeProcessing;
-import schema.AtomicFieldChange;
-import schema.Schema;
-import schema.SchemaDifference;
-import schema.SchemaHistory;
+import data_processing.Schema;
+import data_processing.SchemaDifference;
+import data_processing.SchemaHistory;
 
 class SchemaDifferenceTest {
 	

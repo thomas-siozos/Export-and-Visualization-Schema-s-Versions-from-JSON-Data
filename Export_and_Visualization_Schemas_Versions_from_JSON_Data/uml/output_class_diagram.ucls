@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="output.VersionDirectory" project="Diploma" 
-    file="/Diploma/src/output/VersionDirectory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="677" y="239"/>    
+  <class id="1" language="java" name="output.VersionFile" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/output/VersionFile.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="187" x="41" y="266"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="output.JSOutputFile" project="Diploma" 
-    file="/Diploma/src/output/JSOutputFile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="559" y="468"/>    
+  <class id="2" language="java" name="output.JSOutputFile" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/output/JSOutputFile.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="187" x="268" y="266"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="output.VersionFile" project="Diploma" file="/Diploma/src/output/VersionFile.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="786" y="441"/>    
+  <class id="3" language="java" name="output.VersionDirectory" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/output/VersionDirectory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="194" x="155" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -29,12 +35,12 @@
     </display>  
   </class>  
   <generalization id="4">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
   </generalization>  
   <generalization id="5">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="TARGET" refId="3"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

@@ -1,49 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <package id="1" language="java" name="data_processing" project="Diploma" file="/Diploma/src/data_processing" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="50" width="120" x="41" y="127"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="2" language="java" name="gui" project="Diploma" file="/Diploma/src/gui" binary="false" 
+  <package id="1" language="java" name="data_processing" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/data_processing" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="50" width="101" x="121" y="37"/>    
+    <position height="50" width="120" x="196" y="127"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <package id="3" language="java" name="output" project="Diploma" file="/Diploma/src/output" binary="false" 
+  <package id="2" language="java" name="gui" project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/gui" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="101" x="119" y="37"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="3" language="java" name="output" project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/output" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="101" x="196" y="217"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="4" language="java" name="saving_projects" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/saving_projects" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="50" width="101" x="41" y="307"/>    
+    <position height="50" width="115" x="41" y="127"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <package id="4" language="java" name="saving_projects" project="Diploma" file="/Diploma/src/saving_projects" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="50" width="115" x="201" y="127"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="5" language="java" name="schema" project="Diploma" file="/Diploma/src/schema" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="101" x="41" y="217"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
+  <dependency id="5">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
   <dependency id="6">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="4"/>  
   </dependency>  
   <dependency id="7">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="8">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="9">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="10">    
-    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

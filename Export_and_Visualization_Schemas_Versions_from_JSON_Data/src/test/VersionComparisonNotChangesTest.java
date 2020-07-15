@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data_processing.ObjectNode;
 import data_processing.ObjectNodeProcessing;
+import data_processing.SchemaHistory;
 import data_processing.VersionComparison;
-import schema.SchemaHistory;
 
 class VersionComparisonNotChangesTest {
 	

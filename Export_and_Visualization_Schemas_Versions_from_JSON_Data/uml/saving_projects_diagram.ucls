@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="saving_projects.ProjectSaving" project="Diploma" 
-    file="/Diploma/src/saving_projects/ProjectSaving.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="212" x="709" y="239"/>    
+  <class id="1" language="java" name="saving_projects.ProjectSaving" 
+    project="Export_and_Visualization_Schemas_Versions_from_JSON_Data" 
+    file="/Export_and_Visualization_Schemas_Versions_from_JSON_Data/src/saving_projects/ProjectSaving.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="212" x="41" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
