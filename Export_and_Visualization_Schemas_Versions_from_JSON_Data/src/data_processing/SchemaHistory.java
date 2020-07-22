@@ -1,9 +1,13 @@
 package data_processing;
 
-import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import output.JSOutputFile;
+import output.OutputTemplate;
+import output.VersionDirectory;
 import output.VersionFile;
 
 public class SchemaHistory {
@@ -13,8 +17,9 @@ public class SchemaHistory {
 	private final int ROOT_OBJECT_DEPTH = 0;
 	private final String ADDED_FIELD = "+";
 	private final String REMOVED_FIELD = "-";
-	private VersionFile versionFile;
-	private JSOutputFile jsOutputFile;
+	private OutputTemplate versionDirectory;
+	private OutputTemplate versionFile;
+	private OutputTemplate jsOutputFile;
 	
 	public SchemaHistory() {
 		schemaVersions = new ArrayList<Schema>();
@@ -63,16 +68,24 @@ public class SchemaHistory {
 		int count_versions = 0;
 		StringBuilder contents;
 		StringBuilder contentsForJS;
+		versionDirectory = new VersionDirectory();
 		versionFile = new VersionFile();
 		jsOutputFile = new JSOutputFile();
-		versionFile.createDirectory();
-		File directory = versionFile.getDirectory();
-		jsOutputFile.setDirectory(directory);
-		jsOutputFile.openWriter();
+		versionDirectory.createDirOrFile(null, null);
+		PrintWriter writer = null;
+		try {
+			writer = new PrintWriter(jsOutputFile
+					.getDirectoryName() + "versions.js", "UTF-8");
+		} catch (FileNotFoundException e) {
+			System.out.println("File: version" + jsOutputFile.getId() 
+					+ "not found...");
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("File: version" + jsOutputFile.getId() 
+					+ " unsupported encoding...");
+		}
 		for (Schema version : schemaVersions) {
 			contents = new StringBuilder();
 			contentsForJS = new StringBuilder();
-			versionFile.setDirectory(directory);
 			versionFile.setId(count_versions);
 			jsOutputFile.setId(count_versions);
 			contents.append("Version added at: " +
@@ -95,19 +108,20 @@ public class SchemaHistory {
 			}
 			contents.append(version.printObject(ROOT_OBJECT_DEPTH, true));
 			contentsForJS.append(version.printObject(ROOT_OBJECT_DEPTH, true));
-			if (!versionFile.createVersionFile(contents.toString())) {
+			if (!versionFile.createDirOrFile(contents.toString(), null)) {
 				System.out.println("File: version_"
 					+ Integer.toString(count_versions) + ", wasn't created...");
 				return false;
 			}
-			if (!jsOutputFile.createVersionFile(contentsForJS.toString())) {
+			if (!jsOutputFile.createDirOrFile(contentsForJS.toString(), writer)) {
 				System.out.println("File: version_"
 					+ Integer.toString(count_versions) + ", wasn't created...");
 				return false;
 			}
 			count_versions++;
 		}
-		jsOutputFile.closeWriter();
+		writer.write("var data_counter = " + jsOutputFile.getId() + ";");
+		writer.close();
 		return true;
 	}
 }

@@ -4,31 +4,23 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
-public class VersionFile extends VersionDirectory {
-	
-	private int version_number;
-	
-	public void setId(int version_number) {
-		this.version_number = version_number;
-	}
+public class VersionFile extends OutputTemplate {
 
-	@Override
-	public boolean createVersionFile(String contents) {
-		PrintWriter writer;
+	public boolean createDirOrFile(String contents, PrintWriter writer) {
+		PrintWriter localWriter;
 		try {
-			writer = new PrintWriter(this.getDirectoryName() + "version_"
-						+ version_number + ".csv", "UTF-8");
-			writer.write(contents);
-			writer.close();
+			localWriter = new PrintWriter(this.getDirectoryName() + "version_"
+						+ this.getId() + ".csv", "UTF-8");
+			localWriter.write(contents);
+			localWriter.close();
 			return true;
 		} catch (FileNotFoundException e) {
-			System.out.println("File: version" + version_number
+			System.out.println("File: version" + this.getId()
 					+ "not found...");
 		} catch (UnsupportedEncodingException e) {
-			System.out.println("File: version" + version_number
+			System.out.println("File: version" + this.getId()
 					+ " unsupported encoding...");
 		}
 		return false;
 	}
-
 }

@@ -1,12 +1,14 @@
 package output;
 
 import java.io.File;
+import java.io.PrintWriter;
 
-public abstract class VersionDirectory {
+public class VersionDirectory extends OutputTemplate {
 	
 	private File directory;
 	
-	public boolean createDirectory() {
+	@Override
+	public boolean createDirOrFile(String contents, PrintWriter writer) {
 		String path = "output";
 		directory = new File(path);
 		System.out.println("Creating directory: " + directory.getName());
@@ -20,18 +22,4 @@ public abstract class VersionDirectory {
 		}
 		return result;
 	}
-	
-	public void setDirectory(File directory) {
-		this.directory = directory;
-	}
-	
-	public File getDirectory() {
-		return directory;
-	}
-	
-	public String getDirectoryName() {
-		return directory.getName() + "/";
-	}
-	
-	public abstract boolean createVersionFile(String contents);
 }
