@@ -1,11 +1,6 @@
 # Export and Visualization Schema's Versions from JSON Data
 
-Στόχος του project είναι να εξάγει και να οπτικοποιήσει εκδόσεις του σχήματος
-δεδομένων τύπου [JSON](https://www.json.org/json-en.html). Η επεξεργασία των
-αρχείων εισόδου γίνεται με [Java](https://www.java.com/en/) και την βιβλιοθήκη της [Jackson](https://github.com/FasterXML/jackson). H οπτικοποίηση με την βοήθεια του εργαλείου [Google Charts](https://developers.google.com/chart)
-και συγκεκριμένα τα [Org Charts](https://developers.google.com/chart/interactive/docs/gallery/orgchart).
-Το εργαλείο χρησιμοποιείται με την βοήθεια της [HTML](https://html.com/) και της
-[JavaScript](https://www.javascript.com/).
+The goal of this project is to export and visualize the different versions (schema) of the [JSON](https://www.json.org/json-en.html) data format. The processing of input files (JSON) is done with the [Java](https://www.java.com/en/) and the help of the library [Jackson](https://github.com/FasterXML/jackson). The visualization is done with the tool [Google Charts](https://developers.google.com/chart), specifically with [Org Charts](https://developers.google.com/chart/interactive/docs/gallery/orgchart), in [HTML](https://html.com/) and [JavaScript](https://www.javascript.com/). 
 
 ## Table of Contents
 
@@ -25,10 +20,7 @@
 
 ## Benchamrk
 
-Με την βοήθεια του εργαλείου [JMH](https://openjdk.java.net/projects/code-tools/jmh/)
-εκτελέστηκε το benchmark με αρχεία εισόδου πρώτα με μικρό μέγεθος και ύστερα αρχεία
-με μεγαλύτερο μέγεθος. Έτσι, έγινε η σύγκριση μεταξύ των βιβλιοθηκών της Java για
-το ποια είναι πιο γρήγορη στο να διαβάζει αρχεία.
+The benchmark was performed with the tool [JMH](https://openjdk.java.net/projects/code-tools/jmh/) with small size input files first and then with bigger size. As a result, the comparison was made between the Java's libraries, that support parsing of Json data format, to find out which one is faster.
 
 ### Libraries
 
@@ -52,20 +44,15 @@
 
 <div align="center"><img src="/benchmark/big_files_table.png"/></div>
 
-Οπότε όπως παρατηρούμε η Jackson είναι αρκετά γρήγορη και στις δύο περιπτώσεις.
+The tables show the Jackson library is fast to both cases.
 
 ## Running the tests
 
-Χρησιμοποιόντας το framework [JUnit](https://junit.org/junit5/), ελέγχθηκαν ορισμένες
-μεθόδοι από κλάσεις. Τα tests βρίσκονται στο package testing.
+The tests about some crucial methods are in the package testing. The framework [JUnit](https://junit.org/junit5/) was used.
 
 ## Visualization
 
-Οπότε μετά την επεξεργασία το επόμενο πρόβλημα ήταν να εμφανιστούν στον χρήστη τα αποτελέσματα
-με "ωραίο" τρόπο ώστε να μπορεί να καταλάβει τις διαφορές ανάμεσα στις εκδόσεις που βρέθηκαν.
-Με την βοήθεια της JavaScript, HTML και του εργαλείου Google Charts μπορεί ο χρήστης να
-παρατηρήσει τις διαφορές στις εκδόσεις, καθώς η εφαρμογή του δίνει το δικαίωμα μέσω του default
-browser.
+After the processing of the data the next step was to show the results to the user with a nice way to help him understand the differences between the versions. With JavaScript, HTML and the tool Google Charts the user is able to watch a chart with the versions through a browser.
 
 ### Example of Visualization
 **Input file: cards.json**<br/>
@@ -73,8 +60,7 @@ browser.
 
 ## Output Files
 
-Η εφαρμογή με το που τελειώσει την επεξεργασία του αρχείου εισόδου θα δημιουργήσει αρχεία εξόδου
-ώστε να υπάρχει η κάθε έκδοση σε αυτά και οι διαφορές που βρέθηκαν σε σχέση με την προηγούμενη έκδοση.
+Once the processing of the data is finished, output files will be created so that each file contains the versions that found in the input file.
 
 ## Build With
 
